@@ -1,0 +1,111 @@
+The FIFA World Cup qualification is a set of competitive matches that a national association football team plays in order to qualify for one of the available berths at the final tournament of the men's FIFA World Cup.
+Qualifying tournaments are held within the six FIFA continental zones, each organized by their respective confederations: AFC (Asia), CAF (Africa), CONCACAF (North and Central America and the Caribbean), CONMEBOL (South America), OFC (Oceania), and UEFA (Europe). For each World Cup, FIFA decides the number of places in the finals allocated to each of the zones, based on the numbers and relative strengths of the confederations' teams.
+As a courtesy, the host receives an automatic berth selection, as has happened with the immediate past tournament winner during much of the competition's history. All other finalists are determined on a standalone qualifying round achievement without regard to previous achievements.
+
+
+History
+The berths for the inaugural 1930 tournament were filled by invitation only. The 1934 one was the first one to have an actual qualifying phase. The first ever World Cup qualifying match was played on 11 June 1933, when Sweden defeated Estonia 6–2 in Stockholm, and the first goal was scored 7 minutes into the game, with some sources attributing it to Swedish captain Knut Kroon while others credit it as an own goal by the Estonian goalkeeper Evald Tipner.
+The number of teams entering qualification stages has increased steadily, and in response the final tournament has also been expanded (having 16 teams until 1978, then 24 between 1982 and 1994, then 32 between 1998 and 2022, and finally 48 from 2026 onwards). While the format of the qualifying tournaments has evolved, teams have always been grouped into zones which have remained relatively unchanged and roughly correspond to the continents. The teams from each zone compete for a fixed number of berths for the zone, with a limited number of places being awarded to winners of intercontinental play-offs.
+
+
+Qualification berths by continent
+The table below lists the numbers of berths allocated by FIFA for each continent in each tournament. It also shows the total number of teams that entered and played in every qualification cycle.
+In the table, "H" denotes an automatic spot for the host, "C" denotes an automatic spot for the defending champion, and "inv" indicates the number of teams that were invited in 1930. Places in intercontinental play-offs are represented as fractions, as follows:
+
+0.5 – a place in a direct play-off
+0.25 – a place in a semi-final play-off (where the winner would then face yet another team for a spot in the finals)
+⁠1/3⁠ – a place in a play-off tournament where two out of six teams would qualify
+
+Notes
+
+
+First appearance in qualification by team
+Only teams that played at least one match are considered for first appearance. Teams that withdrew before the qualification, or that qualified to the World Cup by walkover due to other teams' withdrawals, are not considered.
+
+Teams' entries before their actual debuts in qualification
+
+Successor and renamed teams
+
+Other notes
+
+
+Overview of teams' participations
+The below table shows how every team has participated in each World Cup qualification.
+Key
+
+golden background = successful qualifying campaign
+grey background = did not take part in qualifying
+bold red typeface = participated in the final tournament
+
+Non-participating incarnations
+
+Continental allocations
+
+
+Overall team records
+The below table compares the overall records of all teams that have participated in qualification. Teams are ordered by points using the three points for a win system, then by goal difference, and then by goals scored. Note that this order does not represent any official rankings, and qualification tournaments are not direct competitions among all teams.
+The "Qualifying attempts" column counts qualifying campaigns where the team played at least one match that was not annulled. An attempt is treated as "successful" if the team gained the right to participate in the finals, even if it did not appear there eventually.
+As per statistical convention in football, goals scored during extra time are counted towards matches' scorelines and outcomes, while goals scored during penalty shoot-outs are not. Annulled matches are not counted; for matches that were annulled and then replayed, only the replays are counted. For matches where the scorelines were awarded, the awarded scorelines, and not the original ones (if any), are counted.
+Ecuador was deducted 3 points in the 2026 qualifying, which is reflected in the table.
+
+The table is updated to the matches played in March 2026.
+
+
+All-time top scorers
+As of 31 March 2026
+Active international players are highlighted in bold.
+
+
+Qualification tournament rules
+Qualification tournaments generally consist of a number of stages, made up of groups or knock-out ties.
+
+
+Groups
+In all group tournaments, three points are awarded for a win, one for a draw, and none for a loss. FIFA has set the order of the tie-breakers for teams that finish level on points:
+
+goal difference in all group matches
+greater number of goals scored in all group matches
+Where teams are still not able to be separated, the following tie-breakers are used:
+
+greater number of points obtained in matches between the tied teams
+goal difference in matches between the tied teams
+greater number of goals scored in matches between the tied teams
+goals scored away from home in matches between the tied teams, if the tie is only between two teams
+Where teams are still equal, then a play-off on neutral ground, with extra time and penalties if necessary will be played if FIFA deems such a play-off able to be fitted within the coordinated international match calendar. If this is not deemed feasible, then the result will be determined by fair play points and then the drawing of lots.
+Note that this order of tie-breaker application has not always been applied. While it was used in the 2010 qualifiers, the qualification for the 2006 World Cup used the head-to-head comparison prior to goal difference (although this system was – where applicable – used in the 2006 finals themselves). If these rules had applied in 2006, then Nigeria would have qualified rather than Angola.
+
+
+Home-and-away ties
+Most knock-out qualifiers (such as the inter-confederation play-offs and many preliminary ties) are played over two legs. The team that scores a greater aggregate number of goals qualifies. Away goals rule applies. If these rules fail to determine the winner, extra time and penalty shootouts are used.
+Occasionally – usually when one entrant lacks adequate facilities to host international matches – ties are played over a single leg, in which case matches level after 90 minutes will go to extra time and then to a penalty shootout if required.
+Alternatively, "home" matches can be played in neutral countries, or occasionally one team will host both matches. In the latter case the visiting team will still be considered as the "home" team for one of the legs – which may determine which side advances under the away goals rule, as occurred in CONCACAF qualification in 2010.
+
+
+See also
+FIFA World Cup
+FIFA World Cup records and statistics
+FIFA Women's World Cup
+FIFA Women's World Cup qualification
+FIFA Women's World Cup records and statistics
+UEFA European Championship qualifying
+AFC Asian Cup qualifiers
+Africa Cup of Nations qualification
+CONCACAF Gold Cup qualification
+Asian nations at the FIFA World Cup
+African nations at the FIFA World Cup
+North, Central American and Caribbean nations at the FIFA World Cup
+South American nations at the FIFA World Cup
+Oceanian nations at the FIFA World Cup
+European nations at the FIFA World Cup
+
+
+References
+
+
+External links
+
+History of the FIFA World Cup preliminary competition (by year). Published by FIFA in November 2009; archived from the original by Wayback Machine on 23 October 2013.
+FIFA World Cup Preliminary Competition Statistics (PDF) (archived 31 October 2008)
+FIFA World Cup Preliminary History (PDF) (archived 2 September 2009)
+FIFA World Cup 2022 Regulations
+FIFA – official documents

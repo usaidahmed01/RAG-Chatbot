@@ -1,0 +1,98 @@
+{
+    "dataset_name": "Football and FIFA World Cup Wikipedia Dataset",
+    "dataset_description": "A collection of publicly available Wikipedia articles related to association football and the FIFA World Cup.",
+    "generated_at": "2026-06-05T15:52:47.567483+00:00",
+    "article_count": 9,
+    "sources": [
+        {
+            "title": "Association football",
+            "filename": "association_football.txt",
+            "source_url": "https://en.wikipedia.org/wiki/Association_football",
+            "page_id": 10568,
+            "retrieved_at": "2026-06-05T15:52:39.751863+00:00",
+            "license": "Creative Commons Attribution-ShareAlike",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "character_count": 48043
+        },
+        {
+            "title": "FIFA World Cup",
+            "filename": "fifa_world_cup.txt",
+            "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup",
+            "page_id": 11370,
+            "retrieved_at": "2026-06-05T15:52:40.314924+00:00",
+            "license": "Creative Commons Attribution-ShareAlike",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "character_count": 37337
+        },
+        {
+            "title": "History of the FIFA World Cup",
+            "filename": "history_of_the_fifa_world_cup.txt",
+            "source_url": "https://en.wikipedia.org/wiki/History_of_the_FIFA_World_Cup",
+            "page_id": 4723188,
+            "retrieved_at": "2026-06-05T15:52:41.086840+00:00",
+            "license": "Creative Commons Attribution-ShareAlike",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "character_count": 35813
+        },
+        {
+            "title": "2026 FIFA World Cup",
+            "filename": "2026_fifa_world_cup.txt",
+            "source_url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+            "page_id": 36581929,
+            "retrieved_at": "2026-06-05T15:52:41.854319+00:00",
+            "license": "Creative Commons Attribution-ShareAlike",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "character_count": 44891
+        },
+        {
+            "title": "2022 FIFA World Cup",
+            "filename": "2022_fifa_world_cup.txt",
+            "source_url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup",
+            "page_id": 17742072,
+            "retrieved_at": "2026-06-05T15:52:45.795712+00:00",
+            "license": "Creative Commons Attribution-ShareAlike",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "character_count": 69517
+        },
+        {
+            "title": "FIFA World Cup records and statistics",
+            "filename": "fifa_world_cup_records_and_statistics.txt",
+            "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup_records_and_statistics",
+            "page_id": 3602475,
+            "retrieved_at": "2026-06-05T15:52:46.357236+00:00",
+            "license": "Creative Commons Attribution-ShareAlike",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "character_count": 13595
+        },
+        {
+            "title": "List of FIFA World Cup finals",
+            "filename": "list_of_fifa_world_cup_finals.txt",
+            "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals",
+            "page_id": 8821389,
+            "retrieved_at": "2026-06-05T15:52:46.684693+00:00",
+            "license": "Creative Commons Attribution-ShareAlike",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "character_count": 2601
+        },
+        {
+            "title": "List of FIFA World Cup hosts",
+            "filename": "list_of_fifa_world_cup_hosts.txt",
+            "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_hosts",
+            "page_id": 4743361,
+            "retrieved_at": "2026-06-05T15:52:47.228910+00:00",
+            "license": "Creative Commons Attribution-ShareAlike",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "character_count": 33917
+        },
+        {
+            "title": "FIFA World Cup qualifiers",
+            "filename": "fifa_world_cup_qualifiers.txt",
+            "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup_qualifiers",
+            "page_id": 3556431,
+            "retrieved_at": "2026-06-05T15:52:47.566063+00:00",
+            "license": "Creative Commons Attribution-ShareAlike",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "character_count": 8162
+        }
+    ]
+}

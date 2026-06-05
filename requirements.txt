@@ -1,5 +1,6 @@
 langchain
 langchain-community
+langchain-text-splitters
 langchain-chroma
 langchain-huggingface
 langchain-groq
@@ -7,4 +8,5 @@ chromadb
 sentence-transformers
 chainlit
 python-dotenv
-tiktoken
+requests
+transformers
