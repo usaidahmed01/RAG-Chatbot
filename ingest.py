@@ -1,5 +1,7 @@
 """Build the Football RAG vector database."""
 
+import os
+from dotenv import load_dotenv
 import hashlib
 import json
 import re
@@ -13,6 +15,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from transformers import AutoTokenizer
 
+load_dotenv()
 
 DATA_DIRECTORY = Path("data")
 SOURCES_FILE = DATA_DIRECTORY / "sources.json"
@@ -125,7 +128,8 @@ def create_chunks(
 ) -> tuple[list[Document], list[str]]:
 
     tokenizer = AutoTokenizer.from_pretrained(
-        EMBEDDING_MODEL_NAME
+        EMBEDDING_MODEL_NAME,
+        token = os.getenv("HF_TOKEN")
     )
 
     text_splitter = RecursiveCharacterTextSplitter.from_huggingface_tokenizer(
@@ -177,6 +181,7 @@ def create_embeddings() -> HuggingFaceEmbeddings:
         model_name=EMBEDDING_MODEL_NAME,
         model_kwargs={
             "device": "cpu",
+            "token": os.getenv("HF_TOKEN"),
         },
         encode_kwargs={
             "normalize_embeddings": True,
