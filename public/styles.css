@@ -1,0 +1,295 @@
+:root {
+  --fifa-bg-dark: #04110d;
+  --fifa-bg-card: rgba(6, 28, 20, 0.88);
+  --fifa-bg-card-2: rgba(8, 36, 25, 0.82);
+  --fifa-green: #00a86b;
+  --fifa-green-light: #3cffb4;
+  --fifa-gold: #d7b56d;
+  --fifa-gold-soft: rgba(215, 181, 109, 0.25);
+  --fifa-white: #f5f7f4;
+  --fifa-muted: #b7c8bd;
+  --fifa-border: rgba(215, 181, 109, 0.35);
+  --fifa-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+}
+
+/* Background */
+body {
+  background:
+    radial-gradient(circle at top left, rgba(0, 168, 107, 0.16), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(215, 181, 109, 0.10), transparent 28%),
+    linear-gradient(135deg, #020806 0%, #04110d 45%, #092218 100%) !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image:
+    linear-gradient(90deg, transparent 49.5%, rgba(255,255,255,0.5) 50%, transparent 50.5%),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 72px,
+      rgba(255,255,255,0.24) 73px,
+      transparent 74px
+    );
+  z-index: 0;
+}
+
+body::after {
+  content: "⚽";
+  position: fixed;
+  right: 24px;
+  bottom: 100px;
+  font-size: 72px;
+  opacity: 0.08;
+  pointer-events: none;
+  animation: fifaBallFloat 5s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes fifaBallFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(10deg); }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography */
+.markdown-body,
+[class*="markdown"] {
+  color: var(--fifa-white) !important;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+[class*="markdown"] h1,
+[class*="markdown"] h2,
+[class*="markdown"] h3 {
+  color: var(--fifa-gold) !important;
+  text-shadow: 0 0 10px rgba(215, 181, 109, 0.12);
+}
+
+a {
+  color: var(--fifa-green-light) !important;
+}
+
+code {
+  background: rgba(0, 168, 107, 0.16) !important;
+  color: #eafff6 !important;
+  border: 1px solid rgba(60, 255, 180, 0.22);
+  border-radius: 8px;
+  padding: 2px 6px;
+}
+
+blockquote {
+  border-left: 4px solid var(--fifa-gold) !important;
+  background: rgba(215, 181, 109, 0.08) !important;
+  color: var(--fifa-white) !important;
+  border-radius: 10px;
+  padding: 10px 14px !important;
+}
+
+/* Center logo */
+.fifa-center-logo {
+  display: block;
+  margin: 0 auto 12px auto;
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+  object-fit: contain;
+}
+
+/* Badge */
+.fifa-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(0, 168, 107, 0.15);
+  border: 1px solid rgba(60, 255, 180, 0.25);
+  color: var(--fifa-green-light);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+/* Retrieved badge */
+.fifa-retrieved-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(215, 181, 109, 0.12);
+  border: 1px solid rgba(215, 181, 109, 0.35);
+  color: var(--fifa-gold);
+  font-weight: 700;
+  margin: 8px 0 20px 0;
+}
+
+/* Source Cards */
+.fifa-source-card {
+  border: 1px solid rgba(215, 181, 109, 0.28);
+  background: rgba(7, 25, 18, 0.72);
+  border-radius: 18px;
+  padding: 16px;
+  margin: 14px 0;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+.fifa-source-title {
+  color: var(--fifa-gold);
+  font-weight: 800;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.fifa-source-meta {
+  color: var(--fifa-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.fifa-source-preview-label {
+  margin-top: 14px;
+  margin-bottom: 8px;
+  color: var(--fifa-green-light);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Loading */
+.fifa-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--fifa-white);
+  font-weight: 600;
+}
+
+.fifa-loading-ball {
+  font-size: 20px;
+  display: inline-block;
+  animation: fifaBallKick 1.2s ease-in-out infinite;
+}
+
+.fifa-loading-text {
+  color: var(--fifa-green-light);
+}
+
+@keyframes fifaBallKick {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(1px) rotate(-10deg); }
+  50% { transform: translateX(-1px) rotate(10deg); }
+  75% { transform: translateX(1px) rotate(-6deg); }
+}
+
+/* Chat bubbles */
+[class*="message"],
+[class*="Message"] {
+  border-radius: 18px !important;
+}
+
+/* Composer */
+form {
+  background: rgba(8, 22, 17, 0.95) !important;
+  border: 1px solid rgba(215, 181, 109, 0.34) !important;
+  border-radius: 28px !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35) !important;
+  padding: 10px 12px !important;
+  backdrop-filter: blur(8px);
+}
+
+form textarea {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  color: var(--fifa-white) !important;
+  font-size: 16px !important;
+  min-height: 46px !important;
+  padding: 10px 8px !important;
+}
+
+form textarea::placeholder {
+  color: rgba(245, 247, 244, 0.55) !important;
+}
+
+/* Non-submit composer buttons */
+form button:not([type="submit"]) {
+  background: transparent !important;
+  color: var(--fifa-gold) !important;
+  border-radius: 999px !important;
+}
+
+/* Stronger send button selectors */
+form button[type="submit"],
+button[aria-label*="Send"],
+button[title*="Send"],
+button[data-testid*="send"] {
+  width: 52px !important;
+  height: 52px !important;
+  min-width: 52px !important;
+  border-radius: 999px !important;
+  border: none !important;
+  background: linear-gradient(135deg, var(--fifa-green), var(--fifa-gold)) !important;
+  color: #062016 !important;
+  box-shadow: 0 0 20px rgba(0, 168, 107, 0.35) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Hide default arrow */
+form button[type="submit"] svg,
+button[aria-label*="Send"] svg,
+button[title*="Send"] svg,
+button[data-testid*="send"] svg {
+  display: none !important;
+}
+
+/* Football icon instead of arrow */
+form button[type="submit"]::before,
+button[aria-label*="Send"]::before,
+button[title*="Send"]::before,
+button[data-testid*="send"]::before {
+  content: "⚽";
+  font-size: 20px;
+  line-height: 1;
+  display: inline-block;
+  animation: fifaBallKick 1.4s ease-in-out infinite;
+}
+
+/* Hover */
+form button[type="submit"]:hover,
+button[aria-label*="Send"]:hover,
+button[title*="Send"]:hover,
+button[data-testid*="send"]:hover {
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 0 24px rgba(215, 181, 109, 0.45) !important;
+}
+
+hr {
+  border-color: rgba(215, 181, 109, 0.35) !important;
+}
+
+@media (max-width: 768px) {
+  .fifa-center-logo {
+    width: 120px;
+  }
+
+  body::after {
+    font-size: 52px;
+    right: 18px;
+    bottom: 90px;
+  }
+}
