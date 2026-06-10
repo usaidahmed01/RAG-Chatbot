@@ -197,6 +197,22 @@ When the user asks a question, the system embeds the question and compares it wi
 
 This allows the chatbot to answer from local evidence instead of relying only on general model knowledge.
 
+### Retrieval Confidence
+
+The system uses ChromaDB `similarity_search_with_score()` to retrieve relevant chunks with similarity distance scores.
+
+The raw scores are converted into user-friendly confidence labels:
+
+| Score Range | Confidence |
+|---|---|
+| 0.00 – 0.35 | High |
+| 0.36 – 0.60 | Medium |
+| Above 0.60 | Low |
+
+Lower distance means a stronger semantic match between the user question and the retrieved chunk.
+
+The UI displays confidence labels instead of raw scores to keep the interface understandable for non-technical users.
+
 ---
 
 ## 9. LLM and Prompt Design

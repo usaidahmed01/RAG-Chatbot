@@ -95,3 +95,17 @@ The complete RAG workflow is documented here:
 
 ```text
 architecture/rag_architecture.md
+
+## Screenshots
+
+### Welcome UI
+
+![Welcome UI](screenshots/welcome-ui.png)
+
+### Answer with Source Evidence
+
+![Answer with Sources](screenshots/answer-with-sources.png)
+
+### Hallucination Control Test
+
+![Hallucination Test](screenshots/hallucination-test.png)

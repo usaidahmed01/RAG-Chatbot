@@ -20,8 +20,7 @@ def format_sources_for_display(
     """
     Convert retrieved source metadata into user-friendly source summaries.
 
-    This version avoids showing technical chunk details to the user.
-    It keeps source transparency but presents it in a clean way.
+    This version hides technical chunk details but keeps useful confidence labels.
     """
 
     if not sources:
@@ -51,13 +50,16 @@ def format_sources_for_display(
         title = source.get("title", "Unknown title")
         source_url = source.get("source_url", "")
         preview = source.get("retrieved_preview", "").strip()
+        confidence = source.get("source_confidence", "Unknown")
 
-        if len(preview) > 320:
-            preview = preview[:320].rstrip() + "..."
+        if len(preview) > 340:
+            preview = preview[:340].rstrip() + "..."
 
         source_lines.append(
             f"""
 ### ⚽ {title}
+
+**Source Confidence:** `{confidence}`
 
 **Why this source was used:**  
 This source contains relevant football or FIFA World Cup information retrieved from the local knowledge base for your question.

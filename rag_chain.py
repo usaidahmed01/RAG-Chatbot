@@ -10,6 +10,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
 from langchain_huggingface import HuggingFaceEmbeddings
+from sentence_transformers import CrossEncoder
 
 
 load_dotenv()
@@ -21,6 +22,8 @@ COLLECTION_NAME = "football_knowledge_base"
 EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
 DEFAULT_RETRIEVAL_K = 5
+
+
 
 MISSING_INFO_RESPONSE = (
     "The requested target info is missing from the provided dataset."
@@ -112,7 +115,9 @@ def format_context(documents: list[Document]) -> str:
     return "\n\n---\n\n".join(formatted_chunks)
 
 def extract_sources(documents: list[Document]) -> list[dict[str, Any]]:
-    """Extract readable source metadata from retrieved documents for Chainlit UI."""
+    """
+    Extract clean source metadata for UI display.
+    """
 
     sources = []
 
@@ -123,13 +128,14 @@ def extract_sources(documents: list[Document]) -> list[dict[str, Any]]:
             "source_url": document.metadata.get("source_url", ""),
             "chunk_index": document.metadata.get("chunk_index", ""),
             "total_chunks": document.metadata.get("total_chunks", ""),
-            "retrieved_preview": document.page_content[:300].strip(),
+            "retrieval_score": document.metadata.get("retrieval_score", ""),
+            "source_confidence": document.metadata.get("source_confidence", "Unknown"),
+            "retrieved_preview": document.page_content[:420].strip(),
         }
 
         sources.append(source)
 
     return sources
-
 def create_llm() -> ChatGroq:
 
     groq_api_key = os.getenv("GROQ_API_KEY")
@@ -145,22 +151,41 @@ def create_llm() -> ChatGroq:
         api_key=groq_api_key,
     )
 
+def convert_distance_to_confidence(score: float) -> str:
+    """Convert ChromaDB cosine distance score into a user-friendly confidence label."""
+
+    if score <= 0.35:
+        return "High"
+    if score <= 0.60:
+        return "Medium"
+    return "Low"
+
+
 def retrieve_documents(
     question: str,
     k: int = DEFAULT_RETRIEVAL_K,
 ) -> list[Document]:
-    """Retrieve the top-k most relevant chunks from ChromaDB. The vector database uses cosine similarity because that was configured during ingestion."""
+    """
+    Retrieve the most relevant documents from ChromaDB.
+    """
 
     vector_database = load_vector_database()
 
-    retriever = vector_database.as_retriever(
-        search_type="similarity",
-        search_kwargs={
-            "k": k,
-        },
+    retrieved_results = vector_database.similarity_search_with_score(
+        query=question,
+        k=k,
     )
 
-    return retriever.invoke(question)
+    retrieved_documents = []
+
+    for document, score in retrieved_results:
+        document.metadata["retrieval_score"] = round(float(score), 4)
+        document.metadata["source_confidence"] = convert_distance_to_confidence(
+            float(score)
+        )
+        retrieved_documents.append(document)
+
+    return retrieved_documents
 
 def ask_rag(
     question: str,
