@@ -1,295 +1,943 @@
+/* =========================================
+   FIFA 26 Premium RAG UI
+   CSS + JS-powered Chainlit theme
+========================================= */
+
 :root {
-  --fifa-bg-dark: #04110d;
-  --fifa-bg-card: rgba(6, 28, 20, 0.88);
-  --fifa-bg-card-2: rgba(8, 36, 25, 0.82);
-  --fifa-green: #00a86b;
-  --fifa-green-light: #3cffb4;
-  --fifa-gold: #d7b56d;
-  --fifa-gold-soft: rgba(215, 181, 109, 0.25);
-  --fifa-white: #f5f7f4;
-  --fifa-muted: #b7c8bd;
-  --fifa-border: rgba(215, 181, 109, 0.35);
-  --fifa-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+  --wc-bg: #0b0d12;
+  --wc-bg-2: #11141b;
+  --wc-panel: rgba(23, 26, 33, 0.78);
+  --wc-panel-solid: #171a21;
+  --wc-card: rgba(255, 255, 255, 0.055);
+  --wc-card-hover: rgba(0, 200, 120, 0.10);
+  --wc-green: #00c878;
+  --wc-green-2: #63ffc0;
+  --wc-gold: #d7b56d;
+  --wc-white: #f7f7f1;
+  --wc-muted: rgba(247, 247, 241, 0.66);
+  --wc-border: rgba(255, 255, 255, 0.10);
+  --wc-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
 }
 
-/* Background */
-body {
+/* =========================================
+   Global Theme / Dark Mode Lock
+========================================= */
+
+html,
+body,
+body.light,
+body.dark,
+body[data-theme="light"],
+body[data-theme="dark"],
+[data-theme="light"],
+[data-theme="dark"] {
+  color-scheme: dark !important;
   background:
-    radial-gradient(circle at top left, rgba(0, 168, 107, 0.16), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(215, 181, 109, 0.10), transparent 28%),
-    linear-gradient(135deg, #020806 0%, #04110d 45%, #092218 100%) !important;
+    radial-gradient(circle at 50% -10%, rgba(0, 200, 120, 0.18), transparent 30%),
+    radial-gradient(circle at 95% 15%, rgba(215, 181, 109, 0.10), transparent 24%),
+    radial-gradient(circle at 5% 90%, rgba(0, 200, 120, 0.08), transparent 24%),
+    linear-gradient(180deg, #11141b 0%, #0b0d12 100%) !important;
+  color: var(--wc-white) !important;
 }
 
+/* Football pitch background */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.08;
-  background-image:
-    linear-gradient(90deg, transparent 49.5%, rgba(255,255,255,0.5) 50%, transparent 50.5%),
-    repeating-linear-gradient(
-      0deg,
-      transparent 0,
-      transparent 72px,
-      rgba(255,255,255,0.24) 73px,
-      transparent 74px
-    );
   z-index: 0;
+  opacity: 0.075;
+  background:
+    radial-gradient(circle at 50% 42%, transparent 0 88px, rgba(255,255,255,0.24) 90px, transparent 92px),
+    linear-gradient(90deg, transparent 49.8%, rgba(255,255,255,0.24) 50%, transparent 50.2%),
+    repeating-linear-gradient(0deg, transparent 0, transparent 86px, rgba(255,255,255,0.14) 87px, transparent 88px);
 }
 
+/* Stadium spotlight */
 body::after {
-  content: "⚽";
+  content: "";
   position: fixed;
-  right: 24px;
-  bottom: 100px;
-  font-size: 72px;
-  opacity: 0.08;
+  inset: 0;
   pointer-events: none;
-  animation: fifaBallFloat 5s ease-in-out infinite;
   z-index: 0;
+  background:
+    linear-gradient(115deg, transparent 0 28%, rgba(255,255,255,0.035) 40%, transparent 52%),
+    linear-gradient(245deg, transparent 0 30%, rgba(0,200,120,0.045) 44%, transparent 58%);
+  animation: stadiumSweep 8s ease-in-out infinite alternate;
 }
 
-@keyframes fifaBallFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-18px) rotate(10deg); }
+@keyframes stadiumSweep {
+  from {
+    opacity: 0.35;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 0.8;
+    transform: translateX(20px);
+  }
 }
 
 main {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-/* Typography */
+/* =========================================
+   Hide the tiny default welcome message styling noise
+========================================= */
+
 .markdown-body,
 [class*="markdown"] {
-  color: var(--fifa-white) !important;
+  color: var(--wc-white) !important;
+  line-height: 1.72;
+  animation: messageFadeIn 0.35s ease both;
 }
 
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-[class*="markdown"] h1,
-[class*="markdown"] h2,
-[class*="markdown"] h3 {
-  color: var(--fifa-gold) !important;
-  text-shadow: 0 0 10px rgba(215, 181, 109, 0.12);
+@keyframes messageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-a {
-  color: var(--fifa-green-light) !important;
+/* =========================================
+   Premium Hero Injected by custom.js
+========================================= */
+
+#fifa-premium-hero {
+  width: min(1180px, calc(100vw - 48px));
+  margin: 32px auto 34px auto;
+  position: relative;
+  z-index: 5;
 }
 
-code {
-  background: rgba(0, 168, 107, 0.16) !important;
-  color: #eafff6 !important;
-  border: 1px solid rgba(60, 255, 180, 0.22);
-  border-radius: 8px;
-  padding: 2px 6px;
+#fifa-premium-hero::before {
+  content: "";
+  position: absolute;
+  inset: -28px;
+  border-radius: 40px;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(0, 200, 120, 0.16), transparent 28%),
+    radial-gradient(circle at 80% 20%, rgba(215, 181, 109, 0.13), transparent 24%),
+    radial-gradient(circle at 50% 90%, rgba(0, 200, 120, 0.08), transparent 30%);
+  filter: blur(4px);
+  opacity: 0.95;
+  z-index: -1;
 }
 
-blockquote {
-  border-left: 4px solid var(--fifa-gold) !important;
-  background: rgba(215, 181, 109, 0.08) !important;
-  color: var(--fifa-white) !important;
-  border-radius: 10px;
-  padding: 10px 14px !important;
+.fifa-hero-shell {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 28px;
+  align-items: center;
+  padding: 34px;
+  border-radius: 34px;
+
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025));
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  box-shadow: var(--wc-shadow);
+  backdrop-filter: blur(18px);
+  overflow: hidden;
+  position: relative;
 }
 
-/* Center logo */
-.fifa-center-logo {
-  display: block;
-  margin: 0 auto 12px auto;
-  width: 150px;
-  max-width: 100%;
-  height: auto;
-  background: transparent !important;
-  padding: 0 !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.28);
-  object-fit: contain;
+.fifa-hero-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent, rgba(255,255,255,0.035), transparent);
+  transform: translateX(-100%);
+  animation: heroShine 7s linear infinite;
+  pointer-events: none;
 }
 
-/* Badge */
-.fifa-badge {
-  display: inline-block;
-  padding: 8px 14px;
+@keyframes heroShine {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.fifa-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 9px 16px;
+  margin-bottom: 24px;
+
   border-radius: 999px;
-  background: rgba(0, 168, 107, 0.15);
-  border: 1px solid rgba(60, 255, 180, 0.25);
-  color: var(--fifa-green-light);
+  color: var(--wc-green-2);
   font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  line-height: 1.4;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+
+  background: rgba(0, 200, 120, 0.12);
+  border: 1px solid rgba(0, 200, 120, 0.34);
+  box-shadow:
+    0 0 0 4px rgba(0, 200, 120, 0.05),
+    0 16px 40px rgba(0, 0, 0, 0.22);
+  animation: badgePulse 2.8s ease-in-out infinite;
 }
 
-/* Retrieved badge */
-.fifa-retrieved-badge {
-  display: inline-block;
-  padding: 8px 14px;
+.fifa-live-dot {
+  width: 9px;
+  height: 9px;
   border-radius: 999px;
-  background: rgba(215, 181, 109, 0.12);
-  border: 1px solid rgba(215, 181, 109, 0.35);
-  color: var(--fifa-gold);
-  font-weight: 700;
-  margin: 8px 0 20px 0;
+  background: var(--wc-green);
+  box-shadow: 0 0 16px rgba(0, 200, 120, 0.95);
 }
 
-/* Source Cards */
-.fifa-source-card {
-  border: 1px solid rgba(215, 181, 109, 0.28);
-  background: rgba(7, 25, 18, 0.72);
-  border-radius: 18px;
-  padding: 16px;
-  margin: 14px 0;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+@keyframes badgePulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 4px rgba(0, 200, 120, 0.05),
+      0 16px 40px rgba(0, 0, 0, 0.22);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 6px rgba(0, 200, 120, 0.12),
+      0 0 26px rgba(0, 200, 120, 0.18),
+      0 16px 40px rgba(0, 0, 0, 0.22);
+  }
 }
 
-.fifa-source-title {
-  color: var(--fifa-gold);
-  font-weight: 800;
+.fifa-hero-title {
+  margin: 0 0 18px 0;
+  color: var(--wc-white);
+  font-size: clamp(44px, 5.5vw, 78px);
+  line-height: 0.96;
+  font-weight: 950;
+  letter-spacing: -2.8px;
+  text-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.45),
+    0 0 26px rgba(0, 200, 120, 0.08);
+}
+
+.fifa-hero-title span {
+  color: transparent;
+  background: linear-gradient(135deg, var(--wc-white), var(--wc-green-2), var(--wc-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.fifa-hero-subtitle {
+  max-width: 680px;
+  margin: 0 0 18px 0;
+  color: var(--wc-muted);
   font-size: 17px;
-  margin-bottom: 8px;
+  line-height: 1.75;
 }
 
-.fifa-source-meta {
-  color: var(--fifa-muted);
-  font-size: 14px;
-  line-height: 1.7;
+.fifa-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 22px 0 26px 0;
 }
 
-.fifa-source-preview-label {
-  margin-top: 14px;
-  margin-bottom: 8px;
-  color: var(--fifa-green-light);
-  font-weight: 700;
-  font-size: 14px;
+.fifa-tech-row span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: rgba(247, 247, 241, 0.82);
+  font-size: 12px;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.065);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Loading */
-.fifa-loading {
+.fifa-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.fifa-primary-action,
+.fifa-secondary-action,
+.fifa-prompt-card {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.fifa-primary-action,
+.fifa-secondary-action {
+  padding: 13px 18px;
+  border-radius: 999px;
+  font-weight: 900;
+  transition: 0.22s ease;
+}
+
+.fifa-primary-action {
+  color: #06100b;
+  background: linear-gradient(135deg, var(--wc-green-2), var(--wc-green));
+  box-shadow:
+    0 0 0 5px rgba(0, 200, 120, 0.12),
+    0 16px 34px rgba(0, 200, 120, 0.16);
+}
+
+.fifa-secondary-action {
+  color: var(--wc-white);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.fifa-primary-action:hover,
+.fifa-secondary-action:hover {
+  transform: translateY(-3px);
+}
+
+.fifa-hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.fifa-stadium-card {
+  width: min(360px, 100%);
+  min-height: 380px;
+  border-radius: 32px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(circle at 50% 18%, rgba(0, 200, 120, 0.22), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025));
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.025),
+    0 26px 70px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.fifa-stadium-card::before {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border-radius: 28px;
+  opacity: 0.16;
+  background:
+    radial-gradient(circle at center, transparent 0 62px, rgba(255,255,255,0.4) 64px, transparent 66px),
+    linear-gradient(90deg, transparent 49.5%, rgba(255,255,255,0.36) 50%, transparent 50.5%),
+    repeating-linear-gradient(0deg, transparent 0, transparent 42px, rgba(255,255,255,0.22) 43px, transparent 44px);
+}
+
+.fifa-logo-glow {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(215, 181, 109, 0.20), transparent 60%);
+  filter: blur(4px);
+  animation: logoGlow 3.8s ease-in-out infinite;
+}
+
+@keyframes logoGlow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+}
+
+.fifa-hero-logo {
+  width: 220px;
+  max-width: 78%;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  animation: logoFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.34));
+}
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+.fifa-score-card {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  z-index: 3;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 10px;
+  align-items: center;
+
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: rgba(6, 8, 12, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(14px);
+}
+
+.fifa-score-card span {
+  color: rgba(247, 247, 241, 0.62);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.fifa-score-card strong {
+  color: var(--wc-green-2);
+  font-size: 13px;
+  font-weight: 950;
+}
+
+/* Feature cards */
+.fifa-feature-grid {
+  margin: 18px 0 18px 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.fifa-feature-card {
+  padding: 18px;
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
+  transition: 0.22s ease;
+}
+
+.fifa-feature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 200, 120, 0.32);
+  background:
+    linear-gradient(135deg, rgba(0, 200, 120, 0.11), rgba(255, 255, 255, 0.035));
+}
+
+.fifa-feature-icon {
+  display: inline-flex;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.fifa-feature-card h3 {
+  margin: 0 0 6px 0;
+  color: var(--wc-white);
+  font-size: 16px;
+  font-weight: 950;
+}
+
+.fifa-feature-card p {
+  margin: 0;
+  color: var(--wc-muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* Prompt panel */
+.fifa-prompt-panel {
+  margin-top: 18px;
+  padding: 20px;
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.022));
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+}
+
+.fifa-panel-title {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--fifa-white);
-  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--wc-white);
+  font-weight: 950;
+  font-size: 17px;
 }
 
-.fifa-loading-ball {
-  font-size: 20px;
-  display: inline-block;
-  animation: fifaBallKick 1.2s ease-in-out infinite;
+.fifa-prompt-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
 }
 
-.fifa-loading-text {
-  color: var(--fifa-green-light);
+.fifa-prompt-card {
+  min-height: 86px;
+  padding: 14px;
+  border-radius: 18px;
+  text-align: left;
+
+  color: rgba(247, 247, 241, 0.84);
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 1.45;
+
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: 0.22s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes fifaBallKick {
-  0%, 100% { transform: translateX(0) rotate(0deg); }
-  25% { transform: translateX(1px) rotate(-10deg); }
-  50% { transform: translateX(-1px) rotate(10deg); }
-  75% { transform: translateX(1px) rotate(-6deg); }
+.fifa-prompt-card::before {
+  content: "⚽";
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  opacity: 0.10;
+  font-size: 28px;
 }
 
-/* Chat bubbles */
-[class*="message"],
-[class*="Message"] {
-  border-radius: 18px !important;
+.fifa-prompt-card:hover {
+  transform: translateY(-4px);
+  color: var(--wc-white);
+  border-color: rgba(0, 200, 120, 0.35);
+  background:
+    linear-gradient(135deg, rgba(0, 200, 120, 0.13), rgba(215, 181, 109, 0.055));
 }
 
-/* Composer */
-form {
-  background: rgba(8, 22, 17, 0.95) !important;
-  border: 1px solid rgba(215, 181, 109, 0.34) !important;
-  border-radius: 28px !important;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35) !important;
-  padding: 10px 12px !important;
-  backdrop-filter: blur(8px);
+/* =========================================
+   Floating particles
+========================================= */
+
+.premium-pitch-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
 }
 
-form textarea {
-  background: transparent !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  color: var(--fifa-white) !important;
-  font-size: 16px !important;
-  min-height: 46px !important;
-  padding: 10px 8px !important;
+.premium-pitch-particles span {
+  position: absolute;
+  left: var(--x);
+  bottom: -20px;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(99, 255, 192, 0.65);
+  box-shadow: 0 0 16px rgba(0, 200, 120, 0.7);
+  animation: particleRise var(--duration) linear infinite;
+  animation-delay: var(--delay);
 }
 
-form textarea::placeholder {
-  color: rgba(245, 247, 244, 0.55) !important;
+@keyframes particleRise {
+  from {
+    transform: translateY(0) scale(0.8);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.7;
+  }
+
+  to {
+    transform: translateY(-110vh) scale(1.2);
+    opacity: 0;
+  }
 }
 
-/* Non-submit composer buttons */
-form button:not([type="submit"]) {
-  background: transparent !important;
-  color: var(--fifa-gold) !important;
-  border-radius: 999px !important;
+/* =========================================
+   Markdown / RAG Answer Styling
+========================================= */
+
+.markdown-body h1,
+[class*="markdown"] h1 {
+  color: var(--wc-white) !important;
 }
 
-/* Stronger send button selectors */
-form button[type="submit"],
-button[aria-label*="Send"],
-button[title*="Send"],
-button[data-testid*="send"] {
-  width: 52px !important;
-  height: 52px !important;
-  min-width: 52px !important;
-  border-radius: 999px !important;
-  border: none !important;
-  background: linear-gradient(135deg, var(--fifa-green), var(--fifa-gold)) !important;
-  color: #062016 !important;
-  box-shadow: 0 0 20px rgba(0, 168, 107, 0.35) !important;
-  position: relative !important;
+.markdown-body h2,
+[class*="markdown"] h2 {
+  margin-top: 28px !important;
+  color: var(--wc-white) !important;
+  font-size: 28px !important;
+  font-weight: 950 !important;
+}
+
+.markdown-body h3,
+[class*="markdown"] h3 {
+  color: var(--wc-gold) !important;
+  font-weight: 950 !important;
+}
+
+.markdown-body p,
+[class*="markdown"] p {
+  color: rgba(247, 247, 241, 0.82) !important;
+}
+
+code {
+  background: rgba(0, 200, 120, 0.12) !important;
+  color: #dbfff0 !important;
+  border: 1px solid rgba(0, 200, 120, 0.22);
+  border-radius: 9px;
+  padding: 3px 8px;
+}
+
+a {
+  color: var(--wc-green-2) !important;
+}
+
+blockquote {
+  border-left: 4px solid var(--wc-green) !important;
+  background:
+    linear-gradient(135deg, rgba(0, 200, 120, 0.10), rgba(255, 255, 255, 0.025)) !important;
+  color: var(--wc-white) !important;
+  border-radius: 16px;
+  padding: 16px 18px !important;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+}
+
+blockquote p {
+  color: var(--wc-white) !important;
+}
+
+/* Tables as source cards */
+.markdown-body table,
+[class*="markdown"] table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
   overflow: hidden !important;
+  margin: 18px 0 26px 0 !important;
+  border-radius: 18px !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  background:
+    linear-gradient(135deg, rgba(31, 32, 36, 0.92), rgba(18, 19, 22, 0.92)) !important;
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.22),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02);
 }
 
-/* Hide default arrow */
-form button[type="submit"] svg,
-button[aria-label*="Send"] svg,
-button[title*="Send"] svg,
-button[data-testid*="send"] svg {
+.markdown-body th,
+[class*="markdown"] th {
+  background: rgba(0, 200, 120, 0.10) !important;
+  color: var(--wc-green-2) !important;
+  font-weight: 950 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: 12px 14px !important;
+}
+
+.markdown-body td,
+[class*="markdown"] td {
+  color: rgba(247, 247, 241, 0.80) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  padding: 12px 14px !important;
+}
+
+.markdown-body tr:last-child td,
+[class*="markdown"] tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* Hide unwanted markdown image if old app.py still sends it */
+.markdown-body img[alt="FIFA World Cup 2026 Logo"],
+[class*="markdown"] img[alt="FIFA World Cup 2026 Logo"] {
   display: none !important;
 }
 
-/* Football icon instead of arrow */
-form button[type="submit"]::before,
-button[aria-label*="Send"]::before,
-button[title*="Send"]::before,
-button[data-testid*="send"]::before {
-  content: "⚽";
-  font-size: 20px;
-  line-height: 1;
-  display: inline-block;
-  animation: fifaBallKick 1.4s ease-in-out infinite;
+/* =========================================
+   Composer / Input
+========================================= */
+
+form,
+form *,
+div:has(> textarea),
+div:has(textarea) {
+  color-scheme: dark !important;
 }
 
-/* Hover */
-form button[type="submit"]:hover,
-button[aria-label*="Send"]:hover,
-button[title*="Send"]:hover,
-button[data-testid*="send"]:hover {
-  transform: translateY(-2px) scale(1.05) !important;
-  box-shadow: 0 0 24px rgba(215, 181, 109, 0.45) !important;
+form {
+  max-width: 1040px !important;
+  margin: 0 auto 18px auto !important;
+
+  background: rgba(17, 20, 27, 0.92) !important;
+  border: 1px solid rgba(255, 255, 255, 0.11) !important;
+  border-radius: 24px !important;
+
+  box-shadow:
+    0 22px 52px rgba(0, 0, 0, 0.38),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.025) !important;
+
+  padding: 10px 12px !important;
+  backdrop-filter: blur(16px);
+  color: var(--wc-white) !important;
+  transition: 0.25s ease;
 }
 
-hr {
-  border-color: rgba(215, 181, 109, 0.35) !important;
+form:focus-within {
+  border-color: rgba(0, 200, 120, 0.42) !important;
+  box-shadow:
+    0 0 0 5px rgba(0, 200, 120, 0.10),
+    0 22px 52px rgba(0, 0, 0, 0.38) !important;
 }
 
-@media (max-width: 768px) {
-  .fifa-center-logo {
-    width: 120px;
+form > div,
+form [class*="flex"],
+form [class*="bg-"],
+div:has(textarea),
+div:has(> textarea) {
+  background-color: transparent !important;
+  color: var(--wc-white) !important;
+}
+
+textarea,
+form textarea {
+  background: transparent !important;
+  color: var(--wc-white) !important;
+  caret-color: var(--wc-green) !important;
+
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  font-size: 16px !important;
+  min-height: 42px !important;
+  padding: 10px 8px !important;
+}
+
+textarea::placeholder,
+form textarea::placeholder {
+  color: rgba(247, 247, 241, 0.52) !important;
+}
+
+/* Hide upload / mic buttons */
+button[aria-label*="Upload"],
+button[title*="Upload"],
+button[aria-label*="Attach"],
+button[title*="Attach"],
+button[aria-label*="Add"],
+button[title*="Add"],
+button[aria-label*="voice"],
+button[aria-label*="Voice"],
+button[aria-label*="microphone"],
+button[aria-label*="Microphone"],
+button[title*="voice"],
+button[title*="Voice"],
+button[title*="microphone"],
+button[title*="Microphone"] {
+  display: none !important;
+}
+
+/* Send + stop button */
+#chat-submit,
+#stop-button,
+#chat-submit.bg-primary,
+#stop-button.bg-primary,
+#chat-submit.text-primary-foreground,
+#stop-button.text-primary-foreground,
+#chat-submit.hover\:bg-primary\/90,
+#stop-button.hover\:bg-primary\/90,
+#chat-submit[data-state],
+#stop-button[data-state],
+#chat-submit[disabled],
+#stop-button[disabled],
+#chat-submit:disabled,
+#stop-button:disabled,
+#chat-submit:enabled,
+#stop-button:enabled,
+#chat-submit:hover,
+#stop-button:hover,
+#chat-submit:focus,
+#stop-button:focus,
+#chat-submit:focus-visible,
+#stop-button:focus-visible,
+#chat-submit:active,
+#stop-button:active {
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  max-width: 46px !important;
+  padding: 0 !important;
+
+  border-radius: 999px !important;
+  border: 2px solid rgba(0, 200, 120, 0.85) !important;
+
+  background-color: #f4f5ef !important;
+  background-image:
+    radial-gradient(circle at center, #ffffff 0%, #f4f5ef 55%, #d8dbd3 100%) !important;
+
+  color: transparent !important;
+
+  box-shadow:
+    0 0 0 5px rgba(0, 200, 120, 0.16),
+    0 0 26px rgba(0, 200, 120, 0.38),
+    0 10px 24px rgba(0, 0, 0, 0.36) !important;
+
+  opacity: 1 !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.22s ease !important;
+}
+
+#stop-button,
+#stop-button:hover,
+#stop-button:focus,
+#stop-button:active {
+  border-color: rgba(215, 181, 109, 0.92) !important;
+  box-shadow:
+    0 0 0 5px rgba(215, 181, 109, 0.16),
+    0 0 28px rgba(215, 181, 109, 0.38),
+    0 10px 24px rgba(0, 0, 0, 0.36) !important;
+}
+
+#chat-submit svg,
+#chat-submit > svg,
+#chat-submit [class*="svg"],
+#chat-submit [class*="lucide"],
+#stop-button svg,
+#stop-button > svg,
+#stop-button [class*="svg"],
+#stop-button [class*="lucide"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+#chat-submit::before {
+  content: "⚽" !important;
+  position: absolute !important;
+  inset: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-size: 26px !important;
+  color: #111 !important;
+
+  animation: footballSpin 2.8s linear infinite;
+  z-index: 2 !important;
+}
+
+#stop-button::before {
+  content: "⚽" !important;
+  position: absolute !important;
+  inset: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-size: 26px !important;
+  color: #111 !important;
+
+  animation: footballPulse 1s ease-in-out infinite;
+  z-index: 2 !important;
+}
+
+#chat-submit:not(:disabled):hover,
+#stop-button:hover {
+  transform: translateY(-2px) scale(1.06) !important;
+  border-color: var(--wc-gold) !important;
+}
+
+@keyframes footballSpin {
+  from {
+    transform: rotate(0deg);
   }
 
-  body::after {
-    font-size: 52px;
-    right: 18px;
-    bottom: 90px;
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes footballPulse {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.12) rotate(12deg);
+  }
+}
+
+/* Raw HTML fallback */
+pre:has(code.language-html),
+pre:has(code.language-xml) {
+  display: none !important;
+}
+
+/* Watermark */
+[class*="watermark"],
+[class*="disclaimer"] {
+  opacity: 0.35 !important;
+}
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 980px) {
+  .fifa-hero-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .fifa-hero-right {
+    order: -1;
+  }
+
+  .fifa-stadium-card {
+    min-height: 280px;
+  }
+
+  .fifa-feature-grid,
+  .fifa-prompt-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  #fifa-premium-hero {
+    width: min(100vw - 24px, 1180px);
+    margin-top: 18px;
+  }
+
+  .fifa-hero-shell {
+    padding: 22px;
+    border-radius: 26px;
+  }
+
+  .fifa-hero-title {
+    font-size: 42px;
+    letter-spacing: -1.4px;
+  }
+
+  .fifa-hero-subtitle {
+    font-size: 15px;
+  }
+
+  .fifa-tech-row span {
+    font-size: 11px;
+  }
+
+  form {
+    max-width: calc(100vw - 24px) !important;
+    border-radius: 20px !important;
   }
 }
