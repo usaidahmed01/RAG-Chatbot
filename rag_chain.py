@@ -23,7 +23,8 @@ EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
 DEFAULT_RETRIEVAL_K = 5
 
-
+RERANKER_MODEL_NAME = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+RERANKER_CANDIDATE_K = 20
 
 MISSING_INFO_RESPONSE = (
     "The requested target info is missing from the provided dataset."
@@ -129,6 +130,7 @@ def extract_sources(documents: list[Document]) -> list[dict[str, Any]]:
             "chunk_index": document.metadata.get("chunk_index", ""),
             "total_chunks": document.metadata.get("total_chunks", ""),
             "retrieval_score": document.metadata.get("retrieval_score", ""),
+            "rerank_score": document.metadata.get("rerank_score", ""),
             "source_confidence": document.metadata.get("source_confidence", "Unknown"),
             "retrieved_preview": document.page_content[:420].strip(),
         }
@@ -136,6 +138,7 @@ def extract_sources(documents: list[Document]) -> list[dict[str, Any]]:
         sources.append(source)
 
     return sources
+
 def create_llm() -> ChatGroq:
 
     groq_api_key = os.getenv("GROQ_API_KEY")
@@ -146,8 +149,10 @@ def create_llm() -> ChatGroq:
         )
 
     return ChatGroq(
-        model=os.getenv("GROQ_MODEL", "llama-3.1-8b-instant"),
-        temperature=0.2,
+        # model=os.getenv("GROQ_MODEL", "llama-3.1-8b-instant"),
+        model=os.getenv("GROQ_MODEL"),
+
+        temperature=0.3,
         api_key=groq_api_key,
     )
 
@@ -161,31 +166,124 @@ def convert_distance_to_confidence(score: float) -> str:
     return "Low"
 
 
+def create_reranker() -> CrossEncoder:
+    """
+    Load the cross-encoder reranker model.
+    """
+    return CrossEncoder(RERANKER_MODEL_NAME)
+
+def rerank_documents(
+    question: str,
+    documents: list[Document],
+    top_k: int = DEFAULT_RETRIEVAL_K,
+) -> list[Document]:
+    """
+    Rerank retrieved documents using a cross-encoder reranker.ChromaDB first retrieves candidate chunks.The reranker then sorts those chunks by relevance to the user question.
+    """
+
+    if not documents:
+        return []
+
+    reranker = create_reranker()
+
+    question_document_pairs = [
+        [question, document.page_content]
+        for document in documents
+    ]
+
+    rerank_scores = reranker.predict(question_document_pairs)
+
+    scored_documents = []
+
+    for document, rerank_score in zip(documents, rerank_scores):
+        document.metadata["rerank_score"] = round(float(rerank_score), 4)
+        scored_documents.append(document)
+
+    scored_documents.sort(
+        key=lambda document: document.metadata.get("rerank_score", 0),
+        reverse=True,
+    )
+
+    return scored_documents[:top_k]
+
+def expand_query(question: str) -> str:
+    """
+    Expand common football terms so retrieval can find related award pages.
+    """
+
+    expanded_question = question
+
+    football_synonyms = {
+        "top scorer": "Golden Boot leading goalscorer most goals",
+        "top goalscorer": "Golden Boot leading goalscorer most goals",
+        "highest scorer": "Golden Boot leading goalscorer most goals",
+        "most goals": "Golden Boot leading goalscorer top scorer",
+        "best player": "Golden Ball player of the tournament",
+        "player of the tournament": "Golden Ball best player",
+        "best goalkeeper": "Golden Glove Yashin Award goalkeeper of the tournament",
+        "top assist": "most assists assist maker playmaker",
+        "assist maker": "most assists top assists playmaker",
+        "team of the tournament": "All-Star Team Dream Team team of the tournament",
+        "young player": "Best Young Player Award",
+        "fair play": "FIFA Fair Play Trophy",
+        "scoreline": "final score result defeated won",
+    }
+
+    lower_question = question.lower()
+
+    extra_terms = []
+
+    for key_phrase, related_terms in football_synonyms.items():
+        if key_phrase in lower_question:
+            extra_terms.append(related_terms)
+
+    if extra_terms:
+        expanded_question = f"{question} {' '.join(extra_terms)}"
+
+    return expanded_question
+
 def retrieve_documents(
     question: str,
     k: int = DEFAULT_RETRIEVAL_K,
 ) -> list[Document]:
     """
-    Retrieve the most relevant documents from ChromaDB.
+    Retrieve and rerank the most relevant documents from ChromaDB.
+
+    Step 1:
+    Retrieve more candidate chunks from ChromaDB using vector similarity.
+
+    Step 2:
+    Use a cross-encoder reranker to select the best chunks.
+
+    Step 3:
+    Return the top-k reranked chunks to the RAG pipeline.
     """
 
     vector_database = load_vector_database()
 
+    expended_question = expand_query(question)
+
     retrieved_results = vector_database.similarity_search_with_score(
-        query=question,
-        k=k,
+        query=expended_question,
+        k=RERANKER_CANDIDATE_K,
     )
 
-    retrieved_documents = []
+    candidate_documents = []
 
     for document, score in retrieved_results:
         document.metadata["retrieval_score"] = round(float(score), 4)
         document.metadata["source_confidence"] = convert_distance_to_confidence(
             float(score)
         )
-        retrieved_documents.append(document)
+        candidate_documents.append(document)
 
-    return retrieved_documents
+    reranked_documents = rerank_documents(
+        question=question,
+        documents=candidate_documents,
+        top_k=k,
+    )
+
+    return reranked_documents
 
 def ask_rag(
     question: str,

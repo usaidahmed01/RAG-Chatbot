@@ -213,6 +213,25 @@ Lower distance means a stronger semantic match between the user question and the
 
 The UI displays confidence labels instead of raw scores to keep the interface understandable for non-technical users.
 
+### Reranking Improvement
+
+The retrieval pipeline was improved with an optional cross-encoder reranker.
+
+The system first retrieves a larger set of candidate chunks from ChromaDB using vector similarity. Then a reranker model compares the user question with each candidate chunk and assigns a relevance score.
+
+The pipeline works as follows:
+
+```text
+User Question
+        ↓
+ChromaDB retrieves top 10 candidate chunks
+        ↓
+Cross-encoder reranker scores each chunk
+        ↓
+Top 4 reranked chunks are selected
+        ↓
+Selected chunks are passed to the LLM
+
 ---
 
 ## 9. LLM and Prompt Design

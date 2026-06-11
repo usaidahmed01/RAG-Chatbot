@@ -25,16 +25,74 @@ REQUEST_HEADERS = {
 
 # Wikipedia articles that will form our football knowledge base.
 ARTICLE_TITLES = [
+    # Core football and World Cup overview
     "Association football",
+    "FIFA",
     "FIFA World Cup",
     "History of the FIFA World Cup",
-    "2026 FIFA World Cup",
-    "2022 FIFA World Cup",
-    "FIFA World Cup records and statistics",
-    "List of FIFA World Cup finals",
-    "List of FIFA World Cup hosts",
     "FIFA World Cup qualification",
+    "FIFA World Cup hosts",
+    "List of FIFA World Cup hosts",
+    "List of FIFA World Cup finals",
+
+    # Current and upcoming tournament
+    "2026 FIFA World Cup",
+
+    # Every FIFA World Cup tournament article
+    "1930 FIFA World Cup",
+    "1934 FIFA World Cup",
+    "1938 FIFA World Cup",
+    "1950 FIFA World Cup",
+    "1954 FIFA World Cup",
+    "1958 FIFA World Cup",
+    "1962 FIFA World Cup",
+    "1966 FIFA World Cup",
+    "1970 FIFA World Cup",
+    "1974 FIFA World Cup",
+    "1978 FIFA World Cup",
+    "1982 FIFA World Cup",
+    "1986 FIFA World Cup",
+    "1990 FIFA World Cup",
+    "1994 FIFA World Cup",
+    "1998 FIFA World Cup",
+    "2002 FIFA World Cup",
+    "2006 FIFA World Cup",
+    "2010 FIFA World Cup",
+    "2014 FIFA World Cup",
+    "2018 FIFA World Cup",
+    "2022 FIFA World Cup",
+
+    # Awards and official tournament recognition
+    "FIFA World Cup awards",
+    "FIFA World Cup Golden Ball",
+    "FIFA World Cup Golden Boot",
+    "FIFA World Cup Golden Glove",
+    "FIFA World Cup Best Young Player Award",
+    "FIFA Fair Play Trophy",
+    "FIFA World Cup Dream Team",
+    "FIFA World Cup All-Star Team",
+
+    # Goals, records, stats and milestones
+    "FIFA World Cup records and statistics",
+    "List of FIFA World Cup top goalscorers",
+    "List of FIFA World Cup final goalscorers",
+    "List of FIFA World Cup hat-tricks",
+    "FIFA World Cup hat-tricks",
+    "List of FIFA World Cup own goals",
+    "All-time table of the FIFA World Cup",
+    "National team appearances in the FIFA World Cup",
+    "List of players who have appeared in the most FIFA World Cups",
+
+    # Winners, managers, players
+    "List of FIFA World Cup winning managers",
+    "List of FIFA World Cup winning players",
+
+    # Official tournament items
+    "List of FIFA World Cup official mascots",
+    "List of FIFA World Cup official match balls",
+    "FIFA World Cup trophy",
 ]
+
 
 def create_safe_filename(title: str) -> str:
 
