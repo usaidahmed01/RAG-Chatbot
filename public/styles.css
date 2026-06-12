@@ -941,3 +941,12 @@ pre:has(code.language-xml) {
     border-radius: 20px !important;
   }
 }
+
+button[aria-label*="Attach"],
+button[aria-label*="attach"],
+button[aria-label*="Upload"],
+button[aria-label*="upload"],
+button[aria-label*="File"],
+button[aria-label*="file"] {
+  display: none !important;
+}

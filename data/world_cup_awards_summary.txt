@@ -1,0 +1,504 @@
+FIFA WORLD CUP KNOWLEDGE BASE SUMMARY
+Curated file for RAG retrieval: winners, finals, scorelines, top scorers, major awards, records, milestones, and main tournament facts.
+
+IMPORTANT DATA NOTES:
+- This file is designed to improve retrieval for common FIFA World Cup questions.
+- Official individual awards changed over time.
+- Golden Ball was first officially awarded in 1982.
+- Golden Boot / Golden Shoe was first officially awarded in 1982, although top scorers are known for earlier tournaments.
+- Golden Glove / Yashin Award was first officially awarded in 1994.
+- Best Young Player Award was first officially awarded in 2006.
+- Top assists are not consistently official for every historical World Cup. For all-time assist records, see the records section.
+- Team of the Tournament / All-Star Team has changed format over different editions, so it is not consistently listed tournament-by-tournament here.
+- For exact match-by-match results beyond finals, add a structured CSV match-results dataset later.
+
+GENERAL FIFA WORLD CUP OVERVIEW:
+The FIFA World Cup is the main international association football tournament for senior men's national teams.
+It is organized by FIFA and usually takes place every four years.
+The first FIFA World Cup was held in 1930 in Uruguay.
+The tournament was not held in 1942 and 1946 because of World War II.
+Brazil has won the most FIFA World Cups with five titles.
+Germany and Italy have each won four FIFA World Cups.
+Argentina has won three FIFA World Cups.
+Uruguay and France have each won two FIFA World Cups.
+England and Spain have each won one FIFA World Cup.
+Brazil is the only national team to have played in every FIFA World Cup tournament.
+Miroslav Klose is the all-time top goalscorer in FIFA World Cup history with 16 goals.
+Pelé is the only player to win three FIFA World Cups as a player.
+Just Fontaine holds the record for most goals in a single World Cup tournament with 13 goals in 1958.
+Oleg Salenko holds the record for most goals by one player in a single World Cup match with 5 goals for Russia against Cameroon in 1994.
+Hakan Şükür scored the fastest goal in FIFA World Cup history after about 11 seconds for Turkey against South Korea in 2002.
+Roger Milla is one of the oldest goalscorers in FIFA World Cup history, scoring for Cameroon in 1994 at age 42.
+Essam El-Hadary became the oldest player to appear in a FIFA World Cup match in 2018 at age 45.
+Lionel Messi holds the record for most FIFA World Cup appearances by a player, with 26 appearances.
+Pelé is often credited as one of the all-time assist leaders in World Cup history, with sources varying between 8 and 10 assists.
+Raymond Kopa is commonly cited for one of the highest assist totals in a single tournament, with 9 assists in 1958.
+Lionel Messi assisted in five different FIFA World Cup tournaments: 2006, 2010, 2014, 2018, and 2022.
+
+============================================================
+TOURNAMENT-BY-TOURNAMENT SUMMARY
+============================================================
+
+1930 FIFA World Cup Summary:
+Host: Uruguay.
+Winner: Uruguay.
+Runner-up: Argentina.
+Final scoreline: Uruguay defeated Argentina 4-2.
+Final venue: Estadio Centenario, Montevideo.
+Top scorer: Guillermo Stábile of Argentina with 8 goals.
+Best player / Golden Ball: Not officially awarded at the time.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: This was the first FIFA World Cup.
+Major milestone: Uruguay won the first FIFA World Cup on home soil.
+Major milestone: Thirteen teams participated.
+
+1934 FIFA World Cup Summary:
+Host: Italy.
+Winner: Italy.
+Runner-up: Czechoslovakia.
+Final scoreline: Italy defeated Czechoslovakia 2-1 after extra time.
+Final venue: Stadio Nazionale PNF, Rome.
+Top scorer: Oldřich Nejedlý of Czechoslovakia with 5 goals.
+Best player / Golden Ball: Not officially awarded at the time.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: This was the first World Cup held in Europe.
+Major milestone: Italy won its first World Cup title.
+
+1938 FIFA World Cup Summary:
+Host: France.
+Winner: Italy.
+Runner-up: Hungary.
+Final scoreline: Italy defeated Hungary 4-2.
+Final venue: Stade Olympique de Colombes, Paris.
+Top scorer: Leônidas of Brazil with 7 goals.
+Best player / Golden Ball: Not officially awarded at the time.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: Italy became the first team to win back-to-back FIFA World Cups.
+Major milestone: This was the last World Cup before World War II.
+
+1942 FIFA World Cup Summary:
+Tournament status: Not held because of World War II.
+
+1946 FIFA World Cup Summary:
+Tournament status: Not held because of World War II.
+
+1950 FIFA World Cup Summary:
+Host: Brazil.
+Winner: Uruguay.
+Runner-up: Brazil.
+Decisive final-round match scoreline: Uruguay defeated Brazil 2-1.
+Venue of decisive match: Maracanã Stadium, Rio de Janeiro.
+Top scorer: Ademir of Brazil with 8 goals.
+Best player / Golden Ball: Not officially awarded at the time.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: The 1950 tournament did not have a standard knockout final. The champion was decided by a final group.
+Major milestone: Uruguay's 2-1 win over Brazil became known as the Maracanazo.
+Major milestone: Uruguay won its second FIFA World Cup title.
+
+1954 FIFA World Cup Summary:
+Host: Switzerland.
+Winner: West Germany.
+Runner-up: Hungary.
+Final scoreline: West Germany defeated Hungary 3-2.
+Final venue: Wankdorf Stadium, Bern.
+Top scorer: Sándor Kocsis of Hungary with 11 goals.
+Best player / Golden Ball: Not officially awarded at the time.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: The final is known as the Miracle of Bern.
+Major milestone: West Germany won its first FIFA World Cup title.
+Major milestone: Hungary entered the final as a very strong favorite but lost.
+
+1958 FIFA World Cup Summary:
+Host: Sweden.
+Winner: Brazil.
+Runner-up: Sweden.
+Final scoreline: Brazil defeated Sweden 5-2.
+Final venue: Råsunda Stadium, Solna.
+Top scorer: Just Fontaine of France with 13 goals.
+Best player / Golden Ball: Not officially awarded at the time.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: Brazil won its first FIFA World Cup.
+Major milestone: Pelé became a global star as a 17-year-old.
+Major milestone: Pelé scored in the final and became one of the youngest players to score in a World Cup final.
+Major milestone: Just Fontaine set the record for most goals in a single World Cup tournament with 13 goals.
+
+1962 FIFA World Cup Summary:
+Host: Chile.
+Winner: Brazil.
+Runner-up: Czechoslovakia.
+Final scoreline: Brazil defeated Czechoslovakia 3-1.
+Final venue: Estadio Nacional, Santiago.
+Top scorers: Garrincha, Vavá, Leonel Sánchez, Flórián Albert, Valentin Ivanov, and Dražan Jerković shared the top scorer honor with 4 goals each.
+Best player / Golden Ball: Not officially awarded at the time.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: Brazil won back-to-back World Cups in 1958 and 1962.
+Major milestone: Pelé was injured during the tournament, and Garrincha became a key figure for Brazil.
+
+1966 FIFA World Cup Summary:
+Host: England.
+Winner: England.
+Runner-up: West Germany.
+Final scoreline: England defeated West Germany 4-2 after extra time.
+Final venue: Wembley Stadium, London.
+Top scorer: Eusébio of Portugal with 9 goals.
+Best player / Golden Ball: Not officially awarded at the time.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: England won its first and only FIFA World Cup.
+Major milestone: Geoff Hurst scored a hat-trick in the final.
+Major milestone: Eusébio became one of the stars of the tournament.
+
+1970 FIFA World Cup Summary:
+Host: Mexico.
+Winner: Brazil.
+Runner-up: Italy.
+Final scoreline: Brazil defeated Italy 4-1.
+Final venue: Estadio Azteca, Mexico City.
+Top scorer: Gerd Müller of West Germany with 10 goals.
+Best player / Golden Ball: Not officially awarded at the time.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: Brazil won its third FIFA World Cup.
+Major milestone: Brazil earned the right to keep the Jules Rimet Trophy permanently.
+Major milestone: The 1970 Brazil team is widely considered one of the greatest football teams ever.
+Major milestone: Pelé won his third FIFA World Cup as a player.
+
+1974 FIFA World Cup Summary:
+Host: West Germany.
+Winner: West Germany.
+Runner-up: Netherlands.
+Final scoreline: West Germany defeated Netherlands 2-1.
+Final venue: Olympiastadion, Munich.
+Top scorer: Grzegorz Lato of Poland with 7 goals.
+Best player / Golden Ball: Not officially awarded at the time.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: West Germany won its second FIFA World Cup.
+Major milestone: The Netherlands impressed with Total Football.
+Major milestone: The modern FIFA World Cup Trophy was used for the first time.
+
+1978 FIFA World Cup Summary:
+Host: Argentina.
+Winner: Argentina.
+Runner-up: Netherlands.
+Final scoreline: Argentina defeated Netherlands 3-1 after extra time.
+Final venue: Estadio Monumental, Buenos Aires.
+Top scorer: Mario Kempes of Argentina with 6 goals.
+Best player / Golden Ball: Not officially awarded at the time.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: Argentina won its first FIFA World Cup.
+Major milestone: Mario Kempes was the key attacking star and scored twice in the final.
+
+1982 FIFA World Cup Summary:
+Host: Spain.
+Winner: Italy.
+Runner-up: West Germany.
+Final scoreline: Italy defeated West Germany 3-1.
+Final venue: Santiago Bernabéu Stadium, Madrid.
+Top scorer / Golden Boot: Paolo Rossi of Italy with 6 goals.
+Best player / Golden Ball: Paolo Rossi.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: Italy won its third FIFA World Cup.
+Major milestone: Paolo Rossi won both the Golden Ball and Golden Boot.
+Major milestone: The tournament expanded to 24 teams.
+Major milestone: Brazil's 1982 team is remembered as one of the best teams not to win the World Cup.
+
+1986 FIFA World Cup Summary:
+Host: Mexico.
+Winner: Argentina.
+Runner-up: West Germany.
+Final scoreline: Argentina defeated West Germany 3-2.
+Final venue: Estadio Azteca, Mexico City.
+Top scorer / Golden Boot: Gary Lineker of England with 6 goals.
+Best player / Golden Ball: Diego Maradona.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: Argentina won its second FIFA World Cup.
+Major milestone: Diego Maradona produced one of the greatest individual tournament performances in football history.
+Major milestone: Maradona scored the Hand of God goal and the Goal of the Century against England.
+
+1990 FIFA World Cup Summary:
+Host: Italy.
+Winner: West Germany.
+Runner-up: Argentina.
+Final scoreline: West Germany defeated Argentina 1-0.
+Final venue: Stadio Olimpico, Rome.
+Top scorer / Golden Boot: Salvatore Schillaci of Italy with 6 goals.
+Best player / Golden Ball: Salvatore Schillaci.
+Best goalkeeper / Golden Glove: Not officially awarded at the time.
+Best young player: Not officially awarded at the time.
+Major milestone: West Germany won its third FIFA World Cup.
+Major milestone: The final was decided by a penalty scored by Andreas Brehme.
+Major milestone: This was West Germany's final World Cup before German reunification.
+
+1994 FIFA World Cup Summary:
+Host: United States.
+Winner: Brazil.
+Runner-up: Italy.
+Final scoreline: Brazil drew 0-0 with Italy after extra time and won 3-2 on penalties.
+Final venue: Rose Bowl, Pasadena.
+Top scorers / Golden Boot: Oleg Salenko of Russia and Hristo Stoichkov of Bulgaria with 6 goals each.
+Best player / Golden Ball: Romário.
+Best goalkeeper / Golden Glove / Yashin Award: Michel Preud'homme.
+Best young player: Not officially awarded at the time.
+Major milestone: Brazil won its fourth FIFA World Cup.
+Major milestone: This was the first World Cup final decided by a penalty shoot-out.
+Major milestone: Oleg Salenko scored five goals in one match against Cameroon, a World Cup record.
+
+1998 FIFA World Cup Summary:
+Host: France.
+Winner: France.
+Runner-up: Brazil.
+Final scoreline: France defeated Brazil 3-0.
+Final venue: Stade de France, Saint-Denis.
+Top scorer / Golden Boot: Davor Šuker of Croatia with 6 goals.
+Best player / Golden Ball: Ronaldo of Brazil.
+Best goalkeeper / Golden Glove / Yashin Award: Fabien Barthez.
+Best young player: Not officially awarded at the time.
+Major milestone: France won its first FIFA World Cup.
+Major milestone: Zinedine Zidane scored twice in the final.
+Major milestone: The tournament expanded to 32 teams.
+Major milestone: Croatia reached the semi-finals in its first World Cup as an independent nation and finished third.
+
+2002 FIFA World Cup Summary:
+Hosts: South Korea and Japan.
+Winner: Brazil.
+Runner-up: Germany.
+Final scoreline: Brazil defeated Germany 2-0.
+Final venue: International Stadium, Yokohama.
+Top scorer / Golden Boot: Ronaldo of Brazil with 8 goals.
+Best player / Golden Ball: Oliver Kahn.
+Best goalkeeper / Golden Glove / Yashin Award: Oliver Kahn.
+Best young player: Not officially awarded at the time.
+Major milestone: Brazil won its fifth FIFA World Cup.
+Major milestone: This was the first FIFA World Cup hosted in Asia.
+Major milestone: This was the first FIFA World Cup co-hosted by two countries.
+Major milestone: Ronaldo scored twice in the final.
+Major milestone: Turkey scored the fastest World Cup goal through Hakan Şükür in the third-place match.
+
+2006 FIFA World Cup Summary:
+Host: Germany.
+Winner: Italy.
+Runner-up: France.
+Final scoreline: Italy drew 1-1 with France after extra time and won 5-3 on penalties.
+Final venue: Olympiastadion, Berlin.
+Top scorer / Golden Boot: Miroslav Klose of Germany with 5 goals.
+Best player / Golden Ball: Zinedine Zidane.
+Best goalkeeper / Golden Glove: Gianluigi Buffon.
+Best young player: Lukas Podolski.
+Major milestone: Italy won its fourth FIFA World Cup.
+Major milestone: The final is remembered for Zinedine Zidane's red card.
+Major milestone: Italy won the final by penalty shoot-out.
+
+2010 FIFA World Cup Summary:
+Host: South Africa.
+Winner: Spain.
+Runner-up: Netherlands.
+Final scoreline: Spain defeated Netherlands 1-0 after extra time.
+Final venue: Soccer City, Johannesburg.
+Top scorer / Golden Boot: Thomas Müller of Germany with 5 goals.
+Other players with 5 goals: David Villa, Wesley Sneijder, and Diego Forlán also scored 5 goals.
+Best player / Golden Ball: Diego Forlán.
+Best goalkeeper / Golden Glove: Iker Casillas.
+Best young player: Thomas Müller.
+Fair Play Award: Spain.
+Major milestone: Spain won its first FIFA World Cup.
+Major milestone: This was the first FIFA World Cup hosted in Africa.
+Major milestone: Andrés Iniesta scored the winning goal in extra time.
+Major milestone: Spain became the first European team to win a World Cup outside Europe.
+
+2014 FIFA World Cup Summary:
+Host: Brazil.
+Winner: Germany.
+Runner-up: Argentina.
+Final scoreline: Germany defeated Argentina 1-0 after extra time.
+Final venue: Maracanã Stadium, Rio de Janeiro.
+Top scorer / Golden Boot: James Rodríguez of Colombia with 6 goals.
+Best player / Golden Ball: Lionel Messi.
+Best goalkeeper / Golden Glove: Manuel Neuer.
+Best young player: Paul Pogba.
+Fair Play Award: Colombia.
+Major milestone: Germany won its fourth FIFA World Cup.
+Major milestone: Mario Götze scored the winning goal in extra time.
+Major milestone: Germany defeated Brazil 7-1 in the semi-final, one of the most famous results in World Cup history.
+Major milestone: Germany became the first European team to win a World Cup in the Americas.
+
+2018 FIFA World Cup Summary:
+Host: Russia.
+Winner: France.
+Runner-up: Croatia.
+Final scoreline: France defeated Croatia 4-2.
+Final venue: Luzhniki Stadium, Moscow.
+Top scorer / Golden Boot: Harry Kane of England with 6 goals.
+Best player / Golden Ball: Luka Modrić.
+Best goalkeeper / Golden Glove: Thibaut Courtois.
+Best young player: Kylian Mbappé.
+Fair Play Award: Spain.
+Major milestone: France won its second FIFA World Cup.
+Major milestone: Croatia reached its first World Cup final.
+Major milestone: Kylian Mbappé became one of the youngest players to score in a World Cup final.
+Major milestone: VAR was used at the FIFA World Cup for the first time.
+Major milestone: The final scoreline was France 4-2 Croatia.
+
+2022 FIFA World Cup Summary:
+Host: Qatar.
+Winner: Argentina.
+Runner-up: France.
+Final scoreline: Argentina drew 3-3 with France after extra time and won 4-2 on penalties.
+Final venue: Lusail Stadium, Lusail.
+Top scorer / Golden Boot: Kylian Mbappé of France with 8 goals.
+Best player / Golden Ball: Lionel Messi.
+Best goalkeeper / Golden Glove: Emiliano Martínez.
+Best young player: Enzo Fernández.
+Fair Play Award: England.
+Major milestone: Argentina won its third FIFA World Cup.
+Major milestone: Lionel Messi won his first FIFA World Cup.
+Major milestone: Lionel Messi became the first player to win the Golden Ball twice.
+Major milestone: Kylian Mbappé scored a hat-trick in the final.
+Major milestone: This was the first FIFA World Cup held in the Arab world.
+Major milestone: This was the first FIFA World Cup held in November and December.
+
+2026 FIFA World Cup Summary:
+Hosts: United States, Canada, and Mexico.
+Tournament status: Upcoming / future tournament in this knowledge base.
+Major milestone: The 2026 FIFA World Cup is planned as the first edition with 48 teams.
+Major milestone: It is planned as the first FIFA World Cup hosted by three countries.
+Winner: Not available yet.
+Runner-up: Not available yet.
+Final scoreline: Not available yet.
+Top scorer / Golden Boot: Not available yet.
+Best player / Golden Ball: Not available yet.
+Best goalkeeper / Golden Glove: Not available yet.
+Best young player: Not available yet.
+If asked who will win the 2026 FIFA World Cup, the correct RAG answer should be: The requested target info is missing from the provided dataset.
+
+============================================================
+AWARDS AND TERMS DICTIONARY
+============================================================
+
+Golden Boot:
+The Golden Boot is awarded to the top goalscorer of the tournament.
+Before 1982, the term Golden Boot was not officially used, but tournament top scorers are known historically.
+The Golden Boot was previously called the Golden Shoe from 1982 to 2006.
+
+Golden Ball:
+The Golden Ball is awarded to the best player of the tournament.
+It was first officially awarded in 1982.
+Golden Ball means best player or player of the tournament.
+
+Golden Glove:
+The Golden Glove is awarded to the best goalkeeper of the tournament.
+It was previously known as the Yashin Award from 1994 to 2006.
+Golden Glove means best goalkeeper or goalkeeper of the tournament.
+
+Best Young Player Award:
+The Best Young Player Award recognizes the best young player of the tournament.
+It was first officially awarded in 2006.
+
+Fair Play Award:
+The FIFA Fair Play Trophy recognizes the team with the best fair play record among eligible teams.
+
+Team of the Tournament:
+Team of the Tournament can refer to an official or selected best XI / All-Star Team / Dream Team depending on the edition.
+Because the format changed over time, it should be answered only when the retrieved source clearly states the team.
+
+Top assist maker:
+Top assist maker means the player with the most assists.
+Assist data is less consistently official in older World Cup editions.
+If the retrieved context does not clearly mention assists for a specific tournament, the system should say that the assist detail is missing from the dataset.
+
+Scoreline:
+Scoreline means the final score of a match.
+For World Cup finals, this file includes the final scoreline for every tournament from 1930 to 2022.
+For 1950, there was no standard knockout final. The decisive match was Uruguay 2-1 Brazil.
+
+============================================================
+ALL-TIME RECORDS AND MILESTONES
+============================================================
+
+Most FIFA World Cup titles by country:
+Brazil has won the most FIFA World Cups with 5 titles.
+
+Countries with multiple FIFA World Cup titles:
+Brazil: 5 titles.
+Germany: 4 titles.
+Italy: 4 titles.
+Argentina: 3 titles.
+Uruguay: 2 titles.
+France: 2 titles.
+England: 1 title.
+Spain: 1 title.
+
+All-time top scorer:
+Miroslav Klose is the all-time top scorer in FIFA World Cup history with 16 goals.
+
+Most goals in a single tournament:
+Just Fontaine scored 13 goals for France in the 1958 FIFA World Cup.
+
+Most goals in a single match:
+Oleg Salenko scored 5 goals for Russia against Cameroon in the 1994 FIFA World Cup.
+
+Player with three World Cup titles:
+Pelé won the FIFA World Cup three times with Brazil: 1958, 1962, and 1970.
+
+Most player appearances:
+Lionel Messi holds the record for most FIFA World Cup match appearances with 26 appearances.
+
+Fastest World Cup goal:
+Hakan Şükür scored after about 11 seconds for Turkey against South Korea in 2002.
+
+Young star milestone:
+Pelé became a global star at the 1958 FIFA World Cup as a 17-year-old.
+
+Largest famous semi-final scoreline:
+Germany defeated Brazil 7-1 in the 2014 FIFA World Cup semi-final.
+
+Famous final milestones:
+1966: Geoff Hurst scored a hat-trick in the final for England.
+1970: Brazil won its third title and kept the Jules Rimet Trophy permanently.
+1994: Brazil vs Italy was the first World Cup final decided by penalties.
+2006: Italy defeated France on penalties in a final remembered for Zidane's red card.
+2010: Spain won its first World Cup with Andrés Iniesta's extra-time goal.
+2014: Germany won through Mario Götze's extra-time goal.
+2018: France defeated Croatia 4-2 and won its second title.
+2022: Argentina defeated France on penalties after a 3-3 draw; Messi won the World Cup and Mbappé scored a final hat-trick.
+
+============================================================
+COMMON QUESTION ANSWER PATTERNS FOR RAG
+============================================================
+
+Question: Who won the 2018 FIFA World Cup?
+Answer: France won the 2018 FIFA World Cup.
+
+Question: Who was the top scorer in the 2018 FIFA World Cup?
+Answer: Harry Kane won the Golden Boot as top scorer of the 2018 FIFA World Cup with 6 goals.
+
+Question: Who was the best player in the 2018 FIFA World Cup?
+Answer: Luka Modrić won the Golden Ball as the best player of the 2018 FIFA World Cup.
+
+Question: Who was the best goalkeeper in the 2018 FIFA World Cup?
+Answer: Thibaut Courtois won the Golden Glove as the best goalkeeper of the 2018 FIFA World Cup.
+
+Question: Who won the 2010 FIFA World Cup and what was the scoreline?
+Answer: Spain won the 2010 FIFA World Cup by defeating the Netherlands 1-0 after extra time.
+
+Question: Who is the all-time top scorer in FIFA World Cup history?
+Answer: Miroslav Klose is the all-time top scorer in FIFA World Cup history with 16 goals.
+
+Question: Who has the most World Cup assists?
+Answer: Pelé is often listed as the all-time assist leader, although different sources give him between 8 and 10 assists.
+
+Question: Who will win the 2026 FIFA World Cup?
+Answer: The requested target info is missing from the provided dataset.
+
+Question: Who was the top assist maker in the 1930 FIFA World Cup?
+Answer: The requested target info is missing from the provided dataset, unless a retrieved source clearly provides that assist detail.

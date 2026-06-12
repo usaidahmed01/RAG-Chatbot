@@ -269,6 +269,48 @@
     subtree: true,
     characterData: true
   });
+
+function hideAttachmentButton() {
+  function removeAttachmentButtons() {
+    const buttons = Array.from(document.querySelectorAll("button"));
+
+    buttons.forEach((button) => {
+      const ariaLabel = (button.getAttribute("aria-label") || "").toLowerCase();
+      const title = (button.getAttribute("title") || "").toLowerCase();
+      const text = (button.textContent || "").toLowerCase();
+
+      const isAttachmentButton =
+        ariaLabel.includes("attach") ||
+        ariaLabel.includes("upload") ||
+        ariaLabel.includes("file") ||
+        ariaLabel.includes("pin") ||
+        title.includes("attach") ||
+        title.includes("upload") ||
+        title.includes("file") ||
+        title.includes("pin") ||
+        text.includes("attach") ||
+        text.includes("upload");
+
+      if (isAttachmentButton) {
+        button.style.display = "none";
+        button.setAttribute("aria-hidden", "true");
+        button.setAttribute("tabindex", "-1");
+      }
+    });
+  }
+
+  removeAttachmentButtons();
+
+  const observer = new MutationObserver(() => {
+    removeAttachmentButtons();
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+}
+
 }
 
   waitForApp(() => {
@@ -277,5 +319,6 @@
     enhanceComposerPlaceholder();
     addScrollClass();
     observeAnswerAutoScroll();
+    hideAttachmentButton();
   });
 })();

@@ -360,11 +360,12 @@ AFC–OFC:
 
 
 2038 FIFA World Cup
-In October 2023, mayoral candidate of Bogotá  Gustavo Bolívar announced his interest in Colombia hosting the event on the occasion of the 500th anniversary of the capital city. In May 2025, FIFA vice-president Victor Montagliani supported the idea of England to make either a solo bid or another joint United Kingdom bid for the 2038 FIFA World Cup, pointing to existing infrastructure as well as the successful bids for UEFA Euro 2028 and the 2035 FIFA Women's World Cup. That same month, The Athletic reported that New Zealand was considering a joint bid, possibly with Fiji and the United States. In March 2026, Latvian Minister of Economics Viktors Valainis expressed interest in the tournament being jointly co-hosted by the countries of the Baltic-Nordic region and Lublin Triangle, based on the model of the Euro 2020. In April 2026, the DFB announced interest in Germany bidding for either the 2038 or 2042 World Cup. That same month, the FIGC announced interest in Italy hosting the 2038 World Cup.
+In May 2025, FIFA vice-president Victor Montagliani supported the idea of England to make either a solo bid or another joint United Kingdom bid for the 2038 FIFA World Cup, pointing to existing infrastructure as well as the successful bids for UEFA Euro 2028 and the 2035 FIFA Women's World Cup. That same month, The Athletic reported that New Zealand was considering a joint bid, possibly with Fiji and the United States. In March 2026, Latvian Minister of Economics Viktors Valainis expressed interest in the tournament being jointly co-hosted by the countries of the Baltic-Nordic region and Lublin Triangle, based on the model of the Euro 2020. In April 2026, the DFB announced interest in Germany bidding for either the 2038 or 2042 World Cup. That same month, the FIGC announced interest in Italy hosting the 2038 World Cup.
 If the current hosting rotation model is still in place for the 2038 World Cup, the only eligible confederations that could bid for the tournament would be CONCACAF or OFC, as Europe, Africa and South America will jointly co-host the 2030 World Cup and Asia will host in 2034. However, this has not yet been confirmed by FIFA.
 Possible bidding
 
 UEFA:
+ United Kingdom ( England,  Scotland,  Wales, and  Northern Ireland)
  Latvia,  Denmark,  Estonia,  Finland,  Iceland,  Lithuania,  Norway,  Poland,  Sweden,  Ukraine
  Germany
  Italy
@@ -374,8 +375,6 @@ OFC–AFC:
  New Zealand,  Fiji,  Australia, and  Indonesia
 OFC–CONCACAF:
  New Zealand,  Fiji, and  United States
-CONMEBOL:
- Colombia
 
 
 2042 FIFA World Cup

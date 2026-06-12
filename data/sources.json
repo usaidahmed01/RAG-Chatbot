@@ -1,7 +1,7 @@
 {
     "dataset_name": "Football and FIFA World Cup Wikipedia Dataset",
     "dataset_description": "A collection of publicly available Wikipedia articles related to association football and the FIFA World Cup.",
-    "generated_at": "2026-06-11T12:45:36.368563+00:00",
+    "generated_at": "2026-06-11T15:30:45.858922+00:00",
     "article_count": 50,
     "sources": [
         {
@@ -9,7 +9,7 @@
             "filename": "association_football.txt",
             "source_url": "https://en.wikipedia.org/wiki/Association_football",
             "page_id": 10568,
-            "retrieved_at": "2026-06-11T12:44:52.412129+00:00",
+            "retrieved_at": "2026-06-11T15:30:16.193855+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 48043
@@ -19,7 +19,7 @@
             "filename": "fifa.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA",
             "page_id": 11049,
-            "retrieved_at": "2026-06-11T12:44:52.785915+00:00",
+            "retrieved_at": "2026-06-11T15:30:16.862857+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 40005
@@ -29,7 +29,7 @@
             "filename": "fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup",
             "page_id": 11370,
-            "retrieved_at": "2026-06-11T12:44:53.510422+00:00",
+            "retrieved_at": "2026-06-11T15:30:17.257855+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 37337
@@ -39,7 +39,7 @@
             "filename": "history_of_the_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/History_of_the_FIFA_World_Cup",
             "page_id": 4723188,
-            "retrieved_at": "2026-06-11T12:44:54.211243+00:00",
+            "retrieved_at": "2026-06-11T15:30:18.039842+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 35811
@@ -49,7 +49,7 @@
             "filename": "fifa_world_cup_qualifiers.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup_qualifiers",
             "page_id": 3556431,
-            "retrieved_at": "2026-06-11T12:44:55.433270+00:00",
+            "retrieved_at": "2026-06-11T15:30:18.380762+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 8162
@@ -59,27 +59,27 @@
             "filename": "list_of_fifa_world_cup_hosts.txt",
             "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_hosts",
             "page_id": 4743361,
-            "retrieved_at": "2026-06-11T12:44:56.058914+00:00",
+            "retrieved_at": "2026-06-11T15:30:19.388419+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-            "character_count": 33873
+            "character_count": 33745
         },
         {
             "title": "List of FIFA World Cup hosts",
             "filename": "list_of_fifa_world_cup_hosts.txt",
             "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_hosts",
             "page_id": 4743361,
-            "retrieved_at": "2026-06-11T12:44:57.294542+00:00",
+            "retrieved_at": "2026-06-11T15:30:20.059417+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-            "character_count": 33873
+            "character_count": 33745
         },
         {
             "title": "List of FIFA World Cup finals",
             "filename": "list_of_fifa_world_cup_finals.txt",
             "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals",
             "page_id": 8821389,
-            "retrieved_at": "2026-06-11T12:44:57.660735+00:00",
+            "retrieved_at": "2026-06-11T15:30:20.403040+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 2601
@@ -89,17 +89,17 @@
             "filename": "2026_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
             "page_id": 36581929,
-            "retrieved_at": "2026-06-11T12:44:58.800811+00:00",
+            "retrieved_at": "2026-06-11T15:30:21.206250+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-            "character_count": 45999
+            "character_count": 46106
         },
         {
             "title": "1930 FIFA World Cup",
             "filename": "1930_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1930_FIFA_World_Cup",
             "page_id": 59707,
-            "retrieved_at": "2026-06-11T12:44:59.673493+00:00",
+            "retrieved_at": "2026-06-11T15:30:22.072300+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 22107
@@ -109,7 +109,7 @@
             "filename": "1934_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1934_FIFA_World_Cup",
             "page_id": 59729,
-            "retrieved_at": "2026-06-11T12:45:03.219973+00:00",
+            "retrieved_at": "2026-06-11T15:30:22.447809+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 9279
@@ -119,7 +119,7 @@
             "filename": "1938_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1938_FIFA_World_Cup",
             "page_id": 59879,
-            "retrieved_at": "2026-06-11T12:45:03.717200+00:00",
+            "retrieved_at": "2026-06-11T15:30:23.050229+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 9247
@@ -129,7 +129,7 @@
             "filename": "1950_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1950_FIFA_World_Cup",
             "page_id": 59893,
-            "retrieved_at": "2026-06-11T12:45:04.396805+00:00",
+            "retrieved_at": "2026-06-11T15:30:23.668453+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 15367
@@ -139,7 +139,7 @@
             "filename": "1954_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1954_FIFA_World_Cup",
             "page_id": 60523,
-            "retrieved_at": "2026-06-11T12:45:04.990205+00:00",
+            "retrieved_at": "2026-06-11T15:30:24.261701+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 18481
@@ -149,7 +149,7 @@
             "filename": "1958_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1958_FIFA_World_Cup",
             "page_id": 60986,
-            "retrieved_at": "2026-06-11T12:45:05.867342+00:00",
+            "retrieved_at": "2026-06-11T15:30:24.601560+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 18911
@@ -159,7 +159,7 @@
             "filename": "1962_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1962_FIFA_World_Cup",
             "page_id": 61392,
-            "retrieved_at": "2026-06-11T12:45:07.371927+00:00",
+            "retrieved_at": "2026-06-11T15:30:25.212572+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 15495
@@ -169,7 +169,7 @@
             "filename": "1966_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1966_FIFA_World_Cup",
             "page_id": 61629,
-            "retrieved_at": "2026-06-11T12:45:08.178366+00:00",
+            "retrieved_at": "2026-06-11T15:30:25.822644+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 21026
@@ -179,7 +179,7 @@
             "filename": "1970_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1970_FIFA_World_Cup",
             "page_id": 157227,
-            "retrieved_at": "2026-06-11T12:45:08.913885+00:00",
+            "retrieved_at": "2026-06-11T15:30:26.621790+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 22715
@@ -189,7 +189,7 @@
             "filename": "1974_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1974_FIFA_World_Cup",
             "page_id": 157228,
-            "retrieved_at": "2026-06-11T12:45:09.533166+00:00",
+            "retrieved_at": "2026-06-11T15:30:27.379706+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 18737
@@ -199,7 +199,7 @@
             "filename": "1978_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1978_FIFA_World_Cup",
             "page_id": 157229,
-            "retrieved_at": "2026-06-11T12:45:10.415731+00:00",
+            "retrieved_at": "2026-06-11T15:30:28.128533+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 30802
@@ -209,7 +209,7 @@
             "filename": "1982_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1982_FIFA_World_Cup",
             "page_id": 157230,
-            "retrieved_at": "2026-06-11T12:45:11.348629+00:00",
+            "retrieved_at": "2026-06-11T15:30:28.767801+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 30385
@@ -219,7 +219,7 @@
             "filename": "1986_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1986_FIFA_World_Cup",
             "page_id": 157231,
-            "retrieved_at": "2026-06-11T12:45:12.264422+00:00",
+            "retrieved_at": "2026-06-11T15:30:29.389532+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 22043
@@ -229,7 +229,7 @@
             "filename": "1990_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1990_FIFA_World_Cup",
             "page_id": 157232,
-            "retrieved_at": "2026-06-11T12:45:13.538798+00:00",
+            "retrieved_at": "2026-06-11T15:30:30.511090+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 41604
@@ -239,7 +239,7 @@
             "filename": "1994_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1994_FIFA_World_Cup",
             "page_id": 147793,
-            "retrieved_at": "2026-06-11T12:45:14.371004+00:00",
+            "retrieved_at": "2026-06-11T15:30:31.326965+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 44632
@@ -249,7 +249,7 @@
             "filename": "1998_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/1998_FIFA_World_Cup",
             "page_id": 126460,
-            "retrieved_at": "2026-06-11T12:45:15.240737+00:00",
+            "retrieved_at": "2026-06-11T15:30:31.877317+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 26303
@@ -259,7 +259,7 @@
             "filename": "2002_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/2002_FIFA_World_Cup",
             "page_id": 52622,
-            "retrieved_at": "2026-06-11T12:45:19.234311+00:00",
+            "retrieved_at": "2026-06-11T15:30:32.617772+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 26886
@@ -269,7 +269,7 @@
             "filename": "2006_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/2006_FIFA_World_Cup",
             "page_id": 157233,
-            "retrieved_at": "2026-06-11T12:45:20.313223+00:00",
+            "retrieved_at": "2026-06-11T15:30:33.406588+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 41082
@@ -279,7 +279,7 @@
             "filename": "2010_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/2010_FIFA_World_Cup",
             "page_id": 168079,
-            "retrieved_at": "2026-06-11T12:45:20.989575+00:00",
+            "retrieved_at": "2026-06-11T15:30:34.142788+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 38185
@@ -289,7 +289,7 @@
             "filename": "2014_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/2014_FIFA_World_Cup",
             "page_id": 656933,
-            "retrieved_at": "2026-06-11T12:45:21.606438+00:00",
+            "retrieved_at": "2026-06-11T15:30:35.031219+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 27752
@@ -299,7 +299,7 @@
             "filename": "2018_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup",
             "page_id": 13327177,
-            "retrieved_at": "2026-06-11T12:45:22.449898+00:00",
+            "retrieved_at": "2026-06-11T15:30:35.588014+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 41001
@@ -309,7 +309,7 @@
             "filename": "2022_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup",
             "page_id": 17742072,
-            "retrieved_at": "2026-06-11T12:45:23.279172+00:00",
+            "retrieved_at": "2026-06-11T15:30:37.052701+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 69522
@@ -319,7 +319,7 @@
             "filename": "fifa_world_cup_awards.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup_awards",
             "page_id": 3482503,
-            "retrieved_at": "2026-06-11T12:45:25.180189+00:00",
+            "retrieved_at": "2026-06-11T15:30:37.413074+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 12295
@@ -329,7 +329,7 @@
             "filename": "fifa_world_cup_awards.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup_awards",
             "page_id": 3482503,
-            "retrieved_at": "2026-06-11T12:45:25.551789+00:00",
+            "retrieved_at": "2026-06-11T15:30:37.813267+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 12295
@@ -339,7 +339,7 @@
             "filename": "fifa_world_cup_awards.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup_awards",
             "page_id": 3482503,
-            "retrieved_at": "2026-06-11T12:45:25.899977+00:00",
+            "retrieved_at": "2026-06-11T15:30:38.210210+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 12295
@@ -349,7 +349,7 @@
             "filename": "fifa_world_cup_awards.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup_awards",
             "page_id": 3482503,
-            "retrieved_at": "2026-06-11T12:45:26.238007+00:00",
+            "retrieved_at": "2026-06-11T15:30:38.711781+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 12295
@@ -359,7 +359,7 @@
             "filename": "fifa_world_cup_awards.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup_awards",
             "page_id": 3482503,
-            "retrieved_at": "2026-06-11T12:45:26.613011+00:00",
+            "retrieved_at": "2026-06-11T15:30:39.246210+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 12295
@@ -369,7 +369,7 @@
             "filename": "fifa_fair_play_trophy.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA_Fair_Play_Trophy",
             "page_id": 27928823,
-            "retrieved_at": "2026-06-11T12:45:27.641400+00:00",
+            "retrieved_at": "2026-06-11T15:30:39.931348+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 1141
@@ -379,7 +379,7 @@
             "filename": "fifa_world_cup_dream_team.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup_Dream_Team",
             "page_id": 27872931,
-            "retrieved_at": "2026-06-11T12:45:27.996302+00:00",
+            "retrieved_at": "2026-06-11T15:30:40.268444+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 1731
@@ -389,7 +389,7 @@
             "filename": "fifa_world_cup_awards.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup_awards",
             "page_id": 3482503,
-            "retrieved_at": "2026-06-11T12:45:28.530817+00:00",
+            "retrieved_at": "2026-06-11T15:30:40.834715+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 12295
@@ -399,7 +399,7 @@
             "filename": "fifa_world_cup_records_and_statistics.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup_records_and_statistics",
             "page_id": 3602475,
-            "retrieved_at": "2026-06-11T12:45:29.516909+00:00",
+            "retrieved_at": "2026-06-11T15:30:41.426418+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 14265
@@ -409,7 +409,7 @@
             "filename": "list_of_fifa_world_cup_top_goalscorers.txt",
             "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_top_goalscorers",
             "page_id": 43255516,
-            "retrieved_at": "2026-06-11T12:45:29.887770+00:00",
+            "retrieved_at": "2026-06-11T15:30:41.914075+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 4333
@@ -419,7 +419,7 @@
             "filename": "list_of_fifa_world_cup_final_goalscorers.txt",
             "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_final_goalscorers",
             "page_id": 43304210,
-            "retrieved_at": "2026-06-11T12:45:30.292483+00:00",
+            "retrieved_at": "2026-06-11T15:30:42.663397+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 1526
@@ -429,7 +429,7 @@
             "filename": "list_of_fifa_world_cup_hat_tricks.txt",
             "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_hat-tricks",
             "page_id": 7345798,
-            "retrieved_at": "2026-06-11T12:45:30.771938+00:00",
+            "retrieved_at": "2026-06-11T15:30:43.022349+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 5637
@@ -439,7 +439,7 @@
             "filename": "list_of_fifa_world_cup_hat_tricks.txt",
             "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_hat-tricks",
             "page_id": 7345798,
-            "retrieved_at": "2026-06-11T12:45:31.129335+00:00",
+            "retrieved_at": "2026-06-11T15:30:43.402087+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 5637
@@ -449,37 +449,17 @@
             "filename": "list_of_fifa_world_cup_own_goals.txt",
             "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_own_goals",
             "page_id": 34181163,
-            "retrieved_at": "2026-06-11T12:45:31.489750+00:00",
+            "retrieved_at": "2026-06-11T15:30:43.958130+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 4718
-        },
-        {
-            "title": "List of FIFA World Cup winning managers",
-            "filename": "list_of_fifa_world_cup_winning_managers.txt",
-            "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_winning_managers",
-            "page_id": 64005059,
-            "retrieved_at": "2026-06-11T12:45:32.662271+00:00",
-            "license": "Creative Commons Attribution-ShareAlike",
-            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-            "character_count": 3224
-        },
-        {
-            "title": "List of FIFA World Cup winning players",
-            "filename": "list_of_fifa_world_cup_winning_players.txt",
-            "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_winning_players",
-            "page_id": 27818578,
-            "retrieved_at": "2026-06-11T12:45:33.803385+00:00",
-            "license": "Creative Commons Attribution-ShareAlike",
-            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-            "character_count": 4065
         },
         {
             "title": "FIFA World Cup records and statistics",
             "filename": "fifa_world_cup_records_and_statistics.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup_records_and_statistics",
             "page_id": 3602475,
-            "retrieved_at": "2026-06-11T12:45:34.668255+00:00",
+            "retrieved_at": "2026-06-11T15:30:44.367848+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 14265
@@ -489,17 +469,37 @@
             "filename": "national_team_appearances_in_the_fifa_world_cup.txt",
             "source_url": "https://en.wikipedia.org/wiki/National_team_appearances_in_the_FIFA_World_Cup",
             "page_id": 3482531,
-            "retrieved_at": "2026-06-11T12:45:35.330820+00:00",
+            "retrieved_at": "2026-06-11T15:30:44.689325+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 3939
+        },
+        {
+            "title": "List of FIFA World Cup winning managers",
+            "filename": "list_of_fifa_world_cup_winning_managers.txt",
+            "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_winning_managers",
+            "page_id": 64005059,
+            "retrieved_at": "2026-06-11T15:30:45.079469+00:00",
+            "license": "Creative Commons Attribution-ShareAlike",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "character_count": 3063
+        },
+        {
+            "title": "List of FIFA World Cup winning players",
+            "filename": "list_of_fifa_world_cup_winning_players.txt",
+            "source_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_winning_players",
+            "page_id": 27818578,
+            "retrieved_at": "2026-06-11T15:30:45.424609+00:00",
+            "license": "Creative Commons Attribution-ShareAlike",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "character_count": 4065
         },
         {
             "title": "FIFA World Cup Trophy",
             "filename": "fifa_world_cup_trophy.txt",
             "source_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup_Trophy",
             "page_id": 16383,
-            "retrieved_at": "2026-06-11T12:45:36.362218+00:00",
+            "retrieved_at": "2026-06-11T15:30:45.853139+00:00",
             "license": "Creative Commons Attribution-ShareAlike",
             "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
             "character_count": 9379

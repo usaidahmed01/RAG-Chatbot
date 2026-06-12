@@ -81,15 +81,15 @@ ARTICLE_TITLES = [
     "List of FIFA World Cup own goals",
     "All-time table of the FIFA World Cup",
     "National team appearances in the FIFA World Cup",
-    "List of players who have appeared in the most FIFA World Cups",
+    # "List of players who have appeared in the most FIFA World Cups",
 
     # Winners, managers, players
     "List of FIFA World Cup winning managers",
     "List of FIFA World Cup winning players",
 
     # Official tournament items
-    "List of FIFA World Cup official mascots",
-    "List of FIFA World Cup official match balls",
+    # "List of FIFA World Cup official mascots",
+    # "List of FIFA World Cup official match balls",
     "FIFA World Cup trophy",
 ]
 
