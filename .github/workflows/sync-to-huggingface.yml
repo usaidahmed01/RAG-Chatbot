@@ -1,0 +1,26 @@
+name: Sync to Hugging Face Space
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Sync to Hugging Face Space
+        uses: huggingface/hub-sync@main
+        with:
+          github_repo_id: usaidahmed01/RAG-Chatbot
+          huggingface_repo_id: usaidahmed01/football-rag-chatbot
+          repo_type: space
+          token: ${{ secrets.HF_TOKEN }}
