@@ -24,3 +24,4 @@ jobs:
           huggingface_repo_id: usaidahmed01/football-rag-chatbot
           repo_type: space
           token: ${{ secrets.HF_TOKEN }}
+          
