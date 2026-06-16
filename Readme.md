@@ -1,3 +1,13 @@
+---
+title: FIFA 26 Football RAG Chatbot
+emoji: ⚽
+colorFrom: green
+colorTo: yellow
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # FIFA 26 Football RAG Chatbot
 
 A premium football-themed Retrieval-Augmented Generation chatbot focused on football, FIFA World Cup history, records, hosts, qualification, and the 2026 FIFA World Cup.
